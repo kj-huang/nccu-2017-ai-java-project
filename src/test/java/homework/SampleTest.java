@@ -1,7 +1,7 @@
+package homework;
+
 import org.junit.Assert;
 import org.junit.Test;
-
-import homework.Sample;
 
 public class SampleTest {
     @Test
