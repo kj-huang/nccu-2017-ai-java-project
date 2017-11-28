@@ -16,10 +16,29 @@ public class Board {
             }
         }
 
-       //TODO Refactor to real case
-       grid[4][4].add(new Point(Color.RED,4,4));
-       grid[0][12].add(new Point(Color.GREEN,0,12));
-       grid[4][16].add(new Point(Color.YELLOW,4,16));
+
+        //TODO Refactor to real case
+        for(int i = 4; i <= 8; i++){
+            for(int j = 4; j <= 12-i; j++){
+                grid[i][j].add(new Point(Color.RED,i,j));
+            }
+        }
+
+        for(int i = 4; i <= 8; i++){
+            for(int j = 12; j <= 20-i; j++){
+                grid[i][j].add(new Point(Color.YELLOW,i,j));
+            }
+        }
+
+        for(int i = 12; i <= 16; i++){
+            for(int j = 4; j <= 20-i; j++){
+                grid[i][j].add(new Point(Color.GREEN,i,j));
+            }
+        }
+
+//        grid[4][4].add(new Point(Color.RED,4,4));
+//       grid[0][12].add(new Point(Color.GREEN,0,12));
+//       grid[4][16].add(new Point(Color.YELLOW,4,16));
 
     }
 
