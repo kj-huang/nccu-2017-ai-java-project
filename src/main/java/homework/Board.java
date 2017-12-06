@@ -18,6 +18,12 @@ public class Board {
 
 
         //TODO Refactor to real case
+        for(int i = 0; i <= 12; i++) {
+            for (int j = 12; j >= 12 - i; j--) {
+                grid[i][j].add(new Point(Color.NONE, i, j));
+            }
+        }
+
         for(int i = 4; i <= 8; i++){
             for(int j = 4; j <= 12-i; j++){
                 grid[i][j].add(new Point(Color.RED,i,j));
@@ -36,7 +42,11 @@ public class Board {
             }
         }
 
-//        grid[4][4].add(new Point(Color.RED,4,4));
+
+
+
+
+//       grid[4][4].add(new Point(Color.RED,4,4));
 //       grid[0][12].add(new Point(Color.GREEN,0,12));
 //       grid[4][16].add(new Point(Color.YELLOW,4,16));
 
@@ -47,7 +57,7 @@ public class Board {
     }
 
     public Color get(int x, int y) {
-        return grid[x+8][y+8].get(0).getColor();
+        return grid[x][y].get(0).getColor();
     }
 
 //    public void locationTransport(){
