@@ -24,6 +24,25 @@ public class Board {
             }
         }
 
+        for(int i = 0; i <= 4; i++) {
+            for (int j = 12; j >= 12 - i; j--) {
+                grid[i][j].add(new Point(Color.GREEN, i, j));
+            }
+        }
+
+        for(int i = 8; i <= 12; i++) {
+            for (int j = 12; j >= 20 - i; j--) {
+                grid[i][j].add(new Point(Color.RED, i, j));
+            }
+        }
+
+        for(int i = 8; i <= 12; i++) {
+            for (int j = 4; j >= 12 - i; j--) {
+                grid[i][j].add(new Point(Color.YELLOW, i, j));
+            }
+        }
+
+
         for(int i = 4; i <= 8; i++){
             for(int j = 4; j <= 12-i; j++){
                 grid[i][j].add(new Point(Color.RED,i,j));
