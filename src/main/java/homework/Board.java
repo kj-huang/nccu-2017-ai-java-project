@@ -16,14 +16,65 @@ public class Board {
             }
         }
 
-       //TODO Refactor to real case
-       grid[4][4].add(new Point(Color.RED,4,4));
-       grid[0][12].add(new Point(Color.GREEN,0,12));
-       grid[4][16].add(new Point(Color.YELLOW,4,16));
+        for(int i = 8; i < 12; i++) {
+            for (int j = 8; j > 4; j--) {
+                grid[i][j].add(new Point(Color.NONE, i, j));
+            }
+        }
 
+        for(int i = 5; i <= 8; i++) {
+            for (int j = 8; j < 12; j++) {
+                grid[i][j].add(new Point(Color.NONE, i, j));
+            }
+        }
+
+        grid[9][9].add(new Point(Color.NONE, 9, 9));
+        grid[9][10].add(new Point(Color.NONE, 9, 10));
+        grid[10][9].add(new Point(Color.NONE, 10, 9));
+
+        grid[7][7].add(new Point(Color.NONE, 7, 7));
+        grid[7][6].add(new Point(Color.NONE, 7, 6));
+        grid[6][7].add(new Point(Color.NONE, 6, 7));
+
+        for(int i = 0; i <= 4; i++) {
+            for (int j = 12; j >= 12 - i; j--) {
+                grid[i][j].add(new Point(Color.GREEN, i, j));
+            }
+        }
+
+        for(int i = 12; i <= 16; i++){
+            for(int j = 4; j <= 20-i; j++){
+                grid[i][j].add(new Point(Color.GREEN,i,j));
+            }
+        }
+
+        for(int i = 8; i <= 12; i++) {
+            for (int j = 12; j >= 20 - i; j--) {
+                grid[i][j].add(new Point(Color.RED, i, j));
+            }
+        }
+
+        for(int i = 4; i <= 8; i++){
+            for(int j = 4; j <= 12-i; j++){
+                grid[i][j].add(new Point(Color.RED,i,j));
+            }
+        }
+
+        for(int i = 8; i <= 12; i++) {
+            for (int j = 4; j >= 12 - i; j--) {
+                grid[i][j].add(new Point(Color.YELLOW, i, j));
+            }
+        }
+
+        for(int i = 4; i <= 8; i++){
+            for(int j = 12; j <= 20-i; j++){
+                grid[i][j].add(new Point(Color.YELLOW,i,j));
+            }
+        }
     }
 
     void putChecker(Color color, int x, int y) {
+        grid[x+8][y+8].clear();
         grid[x+8][y+8].add(new Point(color,x,y));
     }
 
