@@ -1,5 +1,7 @@
-package homework;
+package homework.BoardTestSuite;
 
+import homework.Board;
+import homework.Color;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

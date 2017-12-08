@@ -1,12 +1,13 @@
-package homework;
+package homework.BoardTestSuite;
 
 
+import homework.Board;
+import homework.Color;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Suite;
 
 import java.util.Arrays;
 import java.util.Collection;

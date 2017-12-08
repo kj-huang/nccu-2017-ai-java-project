@@ -9,7 +9,7 @@ public class Board {
     private ArrayList<Point> [][] grid = new ArrayList[17][17];
 
 
-    Board(){
+    public Board(){
         for(int i = 0; i < 17; i++){
             for(int j = 0; j < 17; j++){
                 grid[i][j] = new ArrayList<Point>();
@@ -73,7 +73,7 @@ public class Board {
         }
     }
 
-    void putChecker(Color color, int x, int y) {
+    public void putChecker(Color color, int x, int y) {
         grid[x+8][y+8].clear();
         grid[x+8][y+8].add(new Point(color,x,y));
     }
