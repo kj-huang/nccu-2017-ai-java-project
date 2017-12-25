@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af97a312-b060-499a-92f3-89a9e9b22ec2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardInitializeTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BoardInitializeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            <state relative-caret-position="361">
+              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
               <folding>
                 <element signature="e#434#435#0" expanded="true" />
                 <element signature="e#465#466#0" expanded="true" />
@@ -109,15 +109,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardAddCheckersTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BoardAddCheckersTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="421">
+              <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,11 +189,11 @@
         <option value="$PROJECT_DIR$/src/main/java/homework/Point.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/PointTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Move.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Checker.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Board.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java" />
       </list>
     </option>
   </component>
@@ -568,7 +570,7 @@
       <workItem from="1512713265718" duration="4200000" />
       <workItem from="1513677261347" duration="902000" />
       <workItem from="1514181172304" duration="10421000" />
-      <workItem from="1514192749704" duration="252000" />
+      <workItem from="1514192749704" duration="379000" />
     </task>
     <servers />
   </component>
@@ -605,7 +607,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21107000" />
+    <option name="totallyTimeSpent" value="21234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="352" y="90" width="1315" height="881" extended-state="0" />
@@ -619,7 +621,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1100,18 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/PointTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1200,8 +1190,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        <state relative-caret-position="361">
+          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
           <folding>
             <element signature="e#434#435#0" expanded="true" />
             <element signature="e#465#466#0" expanded="true" />
@@ -1209,6 +1199,20 @@
             <element signature="e#1174#1175#0" expanded="true" />
             <element signature="e#1223#1224#0" expanded="true" />
             <element signature="e#1247#1248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
           </folding>
         </state>
       </provider>

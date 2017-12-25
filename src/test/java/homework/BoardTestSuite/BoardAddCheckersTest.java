@@ -2,6 +2,7 @@ package homework.BoardTestSuite;
 
 import homework.Board;
 import homework.Color;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,5 +46,10 @@ public class BoardAddCheckersTest {
     public void test() {
         b.putChecker(x, y);
         Assert.assertEquals(expected, b.get(x,y));
+    }
+
+    @After
+    public void TearDown() {
+        b = null;
     }
 }
