@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af97a312-b060-499a-92f3-89a9e9b22ec2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/homework/GameState.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/homework/Jump.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/homework/StartState.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/homework/Strategy.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/homework/JumpTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/homework.asta" afterPath="$PROJECT_DIR$/docs/homework.asta" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Board.java" afterPath="$PROJECT_DIR$/src/main/java/homework/Board.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Checker.java" afterPath="$PROJECT_DIR$/src/main/java/homework/Checker.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/homework/MoveStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/homework/Move.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardOtherTests.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardTestSuite.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardTestSuite.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/MoveTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/MoveTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardInitializeTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BoardInitializeTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -96,7 +83,7 @@
       <file leaf-file-name="BoardAddCheckersTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="757">
               <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#1090#1091#0" expanded="true" />
@@ -106,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jump.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jump.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/homework/Jump.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
@@ -182,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/test/java/homework/TreeUtilTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Point.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/PointTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Client.java" />
@@ -199,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardTestSuite.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Jump.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java" />
       </list>
     </option>
   </component>
@@ -613,7 +600,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34054000" />
+    <option name="totallyTimeSpent" value="34203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1088,14 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/StartState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1103,17 +1082,6 @@
           <folding>
             <element signature="e#126#127#0" expanded="true" />
             <element signature="e#160#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1170,6 +1138,25 @@
             <element signature="e#120#121#0" expanded="true" />
             <element signature="e#158#159#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardAddCheckersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardInitializeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
