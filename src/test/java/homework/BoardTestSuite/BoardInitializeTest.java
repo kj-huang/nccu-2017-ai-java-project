@@ -24,44 +24,23 @@ public class BoardInitializeTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                { -8, 4, Color.GREEN },
-                { -7, 3, Color.GREEN },
-                { -5, 2, Color.GREEN },
-                { 8, -4, Color.GREEN },
-                { 6, -2, Color.GREEN },
-                { 5, -1, Color.GREEN },
-                { -4, 8, Color.YELLOW },
-                { -2, 5, Color.YELLOW },
-                { -3, 7, Color.YELLOW },
-                { 4, -8, Color.YELLOW },
-                { 4, -7, Color.YELLOW },
-                { 1, -5, Color.YELLOW },
-                { -4, -4, Color.RED },
-                { -1, -3, Color.RED },
-                { -3, -3, Color.RED },
-                { 4, 4, Color.RED },
-                { 3, 3, Color.RED },
-                { 2, 2, Color.RED },
-                {0,0, Color.NONE},
-                {1,-1, Color.NONE},
-                {3,-3, Color.NONE},
-                {-1,1, Color.NONE},
-                {-3,3, Color.NONE},
-                {-2,1, Color.NONE},
-                {-1,-1, Color.NONE},
-                {-2,-1, Color.NONE},
-                {-3,0, Color.NONE},
-                {1,1, Color.NONE},
-                {2,1, Color.NONE},
-                {0,3, Color.NONE}
+                { -8, 4, 0 },
+                { -7, 3, 0 },
+                { 0, 2, 0 },
+                { 1, 1, 0 },
+                { -8, 5, -1 },
+                { 8, 3, -1 },
+                { -5, 0, -1 },
+                { 8, -3, -1 },
+                {0,3, 0}
         });
     }
 
     private int x;
     private int y;
-    private Color expected;
+    private int expected;
 
-    public BoardInitializeTest(int x, int y, Color expected) {
+    public BoardInitializeTest(int x, int y, int expected) {
         this.x = x;
         this.y = y;
         this.expected = expected;
