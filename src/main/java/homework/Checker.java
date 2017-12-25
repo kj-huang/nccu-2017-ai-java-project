@@ -4,15 +4,21 @@ public class Checker {
 
     private int x;
     private int y;
-    private MoveStrategy move;
+//    private Strategy strategy;
 
     public Checker(int x, int y){
         this.x = x;
         this.y = y;
     }
 
-    public MoveStrategy move(){
-        return  new MoveStrategy(this);
+    public Jump jump(){
+        System.out.print(printLocation() + ";");
+        return new Jump(this);
+    }
+
+    public Move move(){
+        System.out.print(printLocation() + ";");
+        return new Move(this);
     }
 
 
@@ -32,7 +38,7 @@ public class Checker {
         this.y = y;
     }
 
-    public void getLocation(){
-
+    public String printLocation(){
+        return "(" + getX() + "," + getY() + ")";
     }
 }

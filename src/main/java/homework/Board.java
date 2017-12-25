@@ -3,6 +3,8 @@ package homework;
 import java.util.ArrayList;
 
 public class Board {
+    GameState startState;
+    GameState finishState;
     private ArrayList<Checker> checkers;
 
     private static final int[][] grid = {
