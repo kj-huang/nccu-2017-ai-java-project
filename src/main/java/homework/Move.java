@@ -3,13 +3,6 @@ package homework;
 public class Move {
 
     private Checker checker;
-//    private Board boardState;
-
-
-//    public boolean isValidateMove(int newX, int newY){
-//        boardState.get(1,1);
-//        return true;
-//    }
 
     public Move(Checker c){
         this.checker = c;
@@ -40,5 +33,9 @@ public class Move {
     public void DownRight(){
         checker.setX( checker.getX() + 1 );
         checker.setY( checker.getY() - 1 );
+    }
+
+    public void printLog(){
+
     }
 }

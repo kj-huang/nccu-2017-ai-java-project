@@ -4,16 +4,16 @@ public class Checker {
 
     private int x;
     private int y;
-
+    private Move move;
 
     public Checker(int x, int y){
         this.x = x;
         this.y = y;
     }
-
-    public void moveComplete(){
-
-    }
+//
+//    public Move move(){
+//
+//    }
 
     public void moveOnce(){
         int currentX = this.x;

@@ -23,19 +23,19 @@ public class BoardAddCheckersTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                {Color.DEFAULT, 0, 0},
-                {Color.DEFAULT, 1, 1},
-                {Color.DEFAULT, 5, -1},
-                {Color.DEFAULT, 2, 2},
-                {Color.DEFAULT, 3, 1}
+                {1, 0, 0},
+                {1, 1, 1},
+                {1, 5, -1},
+                {1, 2, 2},
+                {1, 3, 1}
         });
     }
 
     private int x;
     private int y;
-    private Color expected;
+    private int expected;
 
-    public BoardAddCheckersTest(Color expected, int x, int y) {
+    public BoardAddCheckersTest(int expected, int x, int y) {
         this.x = x;
         this.y = y;
         this.expected = expected;

@@ -1,13 +1,13 @@
 package homework;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Board {
     private int x;
     private int y;
     private static int HEIGHT = 17;
-//    private ArrayList<Point> [][] grid = new ArrayList[17][17];
+    private ArrayList<Checker> checkers;
+
 
     private static final int[][] grid = {
             { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0, -1, -1, -1, -1  }, //17
@@ -46,97 +46,11 @@ public class Board {
     };
 
     public Board(){
-        for(int i = 0; i < 17; i++){
-            for(int j = 0; j < 17; j++){
-//                grid[i][j] = new ArrayList<Point>();
-            }
-        }
-
-//        for(int i = 8; i < 12; i++) {
-//            for (int j = 8; j > 4; j--) {
-//                grid[i][j].add(new Point(Color.NONE, i, j));
-//            }
-//        }
-//
-//        for(int i = 5; i <= 8; i++) {
-//            for (int j = 8; j < 12; j++) {
-//                grid[i][j].add(new Point(Color.NONE, i, j));
-//            }
-//        }
-//
-//        grid[9][9].add(new Point(Color.NONE, 9, 9));
-//        grid[9][10].add(new Point(Color.NONE, 9, 10));
-//        grid[10][9].add(new Point(Color.NONE, 10, 9));
-//
-//        grid[7][7].add(new Point(Color.NONE, 7, 7));
-//        grid[7][6].add(new Point(Color.NONE, 7, 6));
-//        grid[6][7].add(new Point(Color.NONE, 6, 7));
-
-//        fillUpperRedArea();
-//        fillLowerRedArea();
-//
-//        fillUpperGreenArea();
-//        fillLowerGreenArea();
-//
-//        fillUpperYellowArea();
-//        fillLowerYellowArea();
+        checkers = new ArrayList<Checker>();
     }
 
     public Board(Color a){
 
-    }
-
-
-    void fillUpperRedArea(){
-        for(int i = 8; i <= 12; i++) {
-            for (int j = 12; j >= 20 - i; j--) {
-//                grid[i][j].add(new Point(Color.RED, i, j));
-            }
-        }
-    }
-
-    void fillUpperYellowArea(){
-        for(int i = 4; i <= 8; i++){
-            for(int j = 12; j <= 20-i; j++){
-//                grid[i][j].add(new Point(Color.YELLOW,i,j));
-            }
-        }
-    }
-
-    void fillUpperGreenArea(){
-        for(int i = 12; i <= 16; i++){
-            for(int j = 4; j <= 20-i; j++){
-//                grid[i][j].add(new Point(Color.GREEN,i,j));
-            }
-        }
-    }
-
-    void fillLowerRedArea(){
-        for(int i = 4; i <= 8; i++){
-            for(int j = 4; j <= 12-i; j++){
-//                grid[i][j].add(new Point(Color.RED,i,j));
-            }
-        }
-    }
-
-
-
-    void fillLowerYellowArea(){
-        for(int i = 8; i <= 12; i++) {
-            for (int j = 4; j >= 12 - i; j--) {
-//                grid[i][j].add(new Point(Color.YELLOW, i, j));
-            }
-        }
-    }
-
-
-
-    void fillLowerGreenArea(){
-        for(int i = 0; i <= 4; i++) {
-            for (int j = 12; j >= 12 - i; j--) {
-//                grid[i][j].add(new Point(Color.GREEN, i, j));
-            }
-        }
     }
 
     public boolean isValidateCoordinate(int x, int y){
@@ -150,16 +64,27 @@ public class Board {
         return false;
     }
 
-    public void putChecker(int x, int y) {
-        if(isEmpty(x,y))
+    public Board putChecker(int x, int y) {
+        if(!isEmpty(x,y)){
             grid[x+8][y+8] = 1;
+            checkers.add(new Checker(x,y));
+        }
+
+        return this;
     }
 
     public int get(int x, int y) {
         return grid[x+8][y+8];
     }
 
+    public Checker getCheckerLocation(int x, int y){
+        for (Checker checker: checkers) {
+            if(checker.getX() == x && checker.getY() == y)
+                return new Checker(x,y);
+        }
 
+        return new Checker(0,0);
+    }
 
     public void fillHome(){
 
