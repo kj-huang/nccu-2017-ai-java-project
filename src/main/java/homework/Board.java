@@ -45,27 +45,19 @@ public class Board {
         checkers = new ArrayList<Checker>();
     }
 
-//    public Board(Color a){
-//
-//    }
-
-    public boolean isValidateCoordinate(int x, int y){
+    private boolean isValidateCoordinate(int x, int y){
         return grid[x + 8][y + 8] != -1;
     }
 
-    public boolean isEmpty(int x, int y){
-        if(isValidateCoordinate(x,y)){
-            return grid[x + 8][y + 8] != 0;
-        }
-        return false;
+    private boolean isEmpty(int x, int y){
+        return isValidateCoordinate(x,y) && grid[x + 8][y + 8] != 0;
     }
 
-    public Board putChecker(int x, int y) {
+    public Board addChecker(int x, int y) {
         if(!isEmpty(x,y)){
             grid[x+8][y+8] = 1;
             checkers.add(new Checker(x,y));
         }
-
         return this;
     }
 
@@ -74,7 +66,7 @@ public class Board {
     }
 
     //TODO
-    public Checker getCheckerLocation(int x, int y){
+    public Checker getCheckerFromLocation(int x, int y){
         for (Checker checker: checkers) {
             if(checker.getX() == x && checker.getY() == y && isValidateCoordinate(x, y))
                 return new Checker(x,y);
