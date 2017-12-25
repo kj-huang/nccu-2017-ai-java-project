@@ -8,17 +8,17 @@ import org.junit.Test;
 public class MoveTest {
 
     private Checker c;
-    private Move move;
+    private MoveStrategy moveStrategy;
 
     @Before
     public void initialize(){
         c = new Checker(0,0);
-        move = new Move(c);
+        moveStrategy = new MoveStrategy(c);
     }
 
     @Test
     public void MoveRightUp(){
-        move.RightUp();
+        moveStrategy.RightUp();
 
         Assert.assertEquals(0, c.getX());
         Assert.assertEquals(1, c.getY());
@@ -26,7 +26,7 @@ public class MoveTest {
 
     @Test
     public void MoveLeftUp(){
-        move.LeftUp();
+        moveStrategy.LeftUp();
 
         Assert.assertEquals(-1, c.getX());
         Assert.assertEquals(1, c.getY());
@@ -34,7 +34,7 @@ public class MoveTest {
 
     @Test
     public void MoveLeft(){
-        move.Left();
+        moveStrategy.Left();
 
         Assert.assertEquals(-1, c.getX());
         Assert.assertEquals(0, c.getY());
@@ -42,7 +42,7 @@ public class MoveTest {
 
     @Test
     public void MoveRight(){
-        move.Right();
+        moveStrategy.Right();
 
         Assert.assertEquals(1, c.getX());
         Assert.assertEquals(0, c.getY());
@@ -50,7 +50,7 @@ public class MoveTest {
 
     @Test
     public void MoveLeftDown(){
-        move.LeftDown();
+        moveStrategy.LeftDown();
 
         Assert.assertEquals(0, c.getX());
         Assert.assertEquals(-1, c.getY());
@@ -58,7 +58,7 @@ public class MoveTest {
 
     @Test
     public void MoveRightDown(){
-        move.DownRight();
+        moveStrategy.DownRight();
 
         Assert.assertEquals(1, c.getX());
         Assert.assertEquals(-1, c.getY());

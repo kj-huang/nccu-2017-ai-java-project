@@ -3,11 +3,7 @@ package homework;
 import java.util.ArrayList;
 
 public class Board {
-    private int x;
-    private int y;
-    private static int HEIGHT = 17;
     private ArrayList<Checker> checkers;
-
 
     private static final int[][] grid = {
             { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0, -1, -1, -1, -1  }, //17
@@ -49,9 +45,9 @@ public class Board {
         checkers = new ArrayList<Checker>();
     }
 
-    public Board(Color a){
-
-    }
+//    public Board(Color a){
+//
+//    }
 
     public boolean isValidateCoordinate(int x, int y){
         return grid[x + 8][y + 8] != -1;
@@ -74,15 +70,15 @@ public class Board {
     }
 
     public int get(int x, int y) {
-        return grid[x+8][y+8];
+        return isValidateCoordinate(x, y) ? grid[x+8][y+8] : -1;
     }
 
+    //TODO
     public Checker getCheckerLocation(int x, int y){
         for (Checker checker: checkers) {
-            if(checker.getX() == x && checker.getY() == y)
+            if(checker.getX() == x && checker.getY() == y && isValidateCoordinate(x, y))
                 return new Checker(x,y);
         }
-
         return new Checker(0,0);
     }
 

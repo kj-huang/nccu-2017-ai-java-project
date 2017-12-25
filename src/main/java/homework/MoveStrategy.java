@@ -1,10 +1,10 @@
 package homework;
 
-public class Move {
+public class MoveStrategy {
 
     private Checker checker;
 
-    public Move(Checker c){
+    public MoveStrategy(Checker c){
         this.checker = c;
     }
 

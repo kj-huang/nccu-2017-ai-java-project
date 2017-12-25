@@ -4,25 +4,17 @@ public class Checker {
 
     private int x;
     private int y;
-    private Move move;
+    private MoveStrategy move;
 
     public Checker(int x, int y){
         this.x = x;
         this.y = y;
     }
-//
-//    public Move move(){
-//
-//    }
 
-    public void moveOnce(){
-        int currentX = this.x;
-        int currentY = this.y;
+    public MoveStrategy move(){
+        return  new MoveStrategy(this);
     }
 
-    public void jump(){
-
-    }
 
     public int getX() {
         return x;
