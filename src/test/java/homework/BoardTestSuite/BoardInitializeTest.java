@@ -3,6 +3,7 @@ package homework.BoardTestSuite;
 
 import homework.Board;
 import homework.Color;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -49,5 +50,10 @@ public class BoardInitializeTest {
     @Test
     public void test() {
         Assert.assertEquals(expected, b.get(x,y));
+    }
+
+    @After
+    public void deleteOutputFile() {
+        b = null;
     }
 }
