@@ -4,4 +4,4 @@ jdk:
   - openjdk7
 
 script:
-  - mvn test
+  - mvn test -B

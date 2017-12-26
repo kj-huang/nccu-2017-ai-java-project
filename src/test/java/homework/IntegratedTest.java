@@ -7,10 +7,11 @@ import java.util.ArrayList;
 
 public class IntegratedTest {
     private Board board;
-
+    private  ArrayList<Checker> checkers;
     @Before
     public void initialize(){
        board = new Board();
+       checkers = new ArrayList<Checker>();
     }
 
     @Test
@@ -24,7 +25,7 @@ public class IntegratedTest {
 
     @Test
     public void ItShouldJumpCheckerFrom00to20WithOneCheckerAt10 (){
-        ArrayList<Checker> checkers = new ArrayList<Checker>();
+
 
         checkers.add(board.addChecker(0,0).getCheckerFromLocation(0,0 ));
         checkers.add(board.addChecker(1,0).getCheckerFromLocation(1,0 ));
@@ -32,13 +33,11 @@ public class IntegratedTest {
         board.updatedBoard();
 
         Assert.assertEquals(true,board.checkerExistAt(2,0));
-        checkers.clear();
+
     }
 
     @Test
     public void ItShouldJumpCheckerFrom00to2Negative2WithTwoCheckersAt10And2Negative1 (){
-        ArrayList<Checker> checkers = new ArrayList<Checker>();
-
         checkers.add(board.addChecker(0,0).getCheckerFromLocation(0,0 ));
         checkers.add(board.addChecker(1,0).getCheckerFromLocation(1,0 ));
         checkers.add(board.addChecker(2,-1).getCheckerFromLocation(1,0 ));
@@ -47,7 +46,6 @@ public class IntegratedTest {
         board.updatedBoard();
 
         Assert.assertEquals(true,board.checkerExistAt(2,-2));
-        checkers.clear();
     }
 
 //    @Test
@@ -63,5 +61,6 @@ public class IntegratedTest {
     @After
     public void cleanUp(){
         board = null;
+        checkers.clear();
     }
 }

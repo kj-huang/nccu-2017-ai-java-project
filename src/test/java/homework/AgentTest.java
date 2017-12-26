@@ -78,8 +78,7 @@ public class AgentTest {
         agent.ReadBoard();
         Checker c = agent.SelectOneChecker();
 
-        Assert.assertEquals(0, c.getX());
-        Assert.assertEquals(-4, c.getY());
+        Assert.assertEquals(true,board.checkerExistAt(0,-4));
     }
 
     @Test
