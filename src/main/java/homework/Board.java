@@ -63,7 +63,7 @@ public class Board {
         return this;
     }
 
-    public int get(int x, int y) {
+    public int getChecker(int x, int y) {
         return isValidateCoordinate(x, y) ? grid[x+8][y+8] : -1;
     }
 

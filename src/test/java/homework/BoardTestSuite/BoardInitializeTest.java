@@ -48,7 +48,7 @@ public class BoardInitializeTest {
 
     @Test
     public void test() {
-        Assert.assertEquals(expected, b.get(x,y));
+        Assert.assertEquals(expected, b.getChecker(x,y));
     }
 
     @After

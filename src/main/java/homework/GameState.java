@@ -1,6 +1,9 @@
 package homework;
 
 public interface GameState {
-//    public void start();
-//    public void finish();
+    void Start();
+    void ReadBoard();
+    void SelectOneChecker();
+    void FinishMove();
+    void GameSet();
 }

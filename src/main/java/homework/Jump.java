@@ -9,7 +9,7 @@ public class Jump implements Strategy{
 
     public Jump Left(){
         checker.setX( checker.getX() - 2 );
-        System.out.println(checker.printLocation());
+        System.out.print(checker.printLocation());
 
         return this;
     }
@@ -17,13 +17,13 @@ public class Jump implements Strategy{
     public Jump LeftUp(){
         checker.setX( checker.getX() - 2 );
         checker.setY( checker.getY() + 2 );
-        System.out.println(checker.printLocation());
+        System.out.print(checker.printLocation());
         return this;
     }
 
     public Jump LeftDown(){
         checker.setY( checker.getY() - 2 );
-        System.out.println(checker.printLocation());
+        System.out.print(checker.printLocation());
 
         return this;
     }
@@ -31,7 +31,7 @@ public class Jump implements Strategy{
 
     public Jump Right(){
         checker.setX( checker.getX() + 2 );
-        System.out.println(checker.printLocation());
+        System.out.print(checker.printLocation());
 
         return this;
     }
@@ -45,7 +45,7 @@ public class Jump implements Strategy{
     public Jump DownRight(){
         checker.setX( checker.getX() + 2 );
         checker.setY( checker.getY() - 2 );
-        System.out.println(checker.printLocation());
+        System.out.print(checker.printLocation());
         return this;
     }
 }

@@ -44,7 +44,7 @@ public class BoardAddCheckersTest {
     @Test
     public void test() {
         b.addChecker(x, y);
-        Assert.assertEquals(expected, b.get(x,y));
+        Assert.assertEquals(expected, b.getChecker(x,y));
     }
 
     @After

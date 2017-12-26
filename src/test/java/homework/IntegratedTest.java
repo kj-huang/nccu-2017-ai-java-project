@@ -47,4 +47,14 @@ public class IntegratedTest {
         Assert.assertEquals(2, checkers.get(0).getX());
         Assert.assertEquals(-2, checkers.get(0).getY());
     }
+
+//    @Test
+//    public void ItShouldMoveOneCheckerFromTo(){
+//
+//    }
+//
+//    @Test
+//    public void ItShouldMoveTwoCheckersFromTo(){
+//
+//    }
 }
