@@ -7,20 +7,20 @@ public class Agent {
     private GameState FinishMoveState;
     private GameState GameSetState;
 
-    private GameState state = new StartGameState(this);
+    private GameState state;
     private int count;
     private Board board;
 
-    Agent(Board board){
+    public Agent(Board board){
         this.count = 0;
 
         this.board = board;
-
         StartGameState = new StartGameState(this, board);
         ReadBoardState = new ReadBoardState(this);
         SelectOneCheckerState = new SelectOneCheckerState(this);
         FinishMoveState = new FinishMoveState(this);
         GameSetState = new GameSetState(this);
+        state = new StartGameState(this, board);
     }
 
     public void StartGame(String arg){

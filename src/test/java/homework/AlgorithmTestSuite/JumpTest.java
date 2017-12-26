@@ -1,5 +1,8 @@
-package homework;
+package homework.AlgorithmTestSuite;
 
+import homework.Checker;
+import homework.Jump;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -64,4 +67,9 @@ public class JumpTest {
         Assert.assertEquals(-2, c.getY());
     }
 
+    @After
+    public void cleanUp(){
+        c = null;
+        jump = null;
+    }
 }

@@ -1,5 +1,9 @@
-package homework;
+package homework.IntegratedSuite;
 
+import homework.Board;
+import homework.Checker;
+import homework.Strategy;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +13,6 @@ import java.util.ArrayList;
 
 public class IntegratedTest {
     private Board board;
-    private Strategy move;
     private ArrayList<Checker> checkers;
 
     @Before
@@ -57,4 +60,10 @@ public class IntegratedTest {
 //    public void ItShouldMoveTwoCheckersFromTo(){
 //
 //    }
+
+    @After
+    public void cleanUp(){
+        board = null;
+        checkers.clear();
+    }
 }

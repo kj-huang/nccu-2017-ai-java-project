@@ -1,9 +1,13 @@
-package homework;
+package homework.AlgorithmTestSuite;
 
 
+import homework.Move;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import homework.Checker;
+
 
 public class MoveTest {
 
@@ -63,5 +67,11 @@ public class MoveTest {
 
         Assert.assertEquals(1, c.getX());
         Assert.assertEquals(-1, c.getY());
+    }
+
+    @After
+    public void cleanUp(){
+        c = null;
+        move = null;
     }
 }

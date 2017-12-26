@@ -24,12 +24,7 @@ public class FinishMoveState implements GameState{
 
         //TODO print out the moving log
 
-        if(true){
-            agent.setState(agent.getReadBoardState());
-        }
-        else {
-            agent.setState(agent.getGameSetState());
-        }
+        agent.setState(agent.getReadBoardState());
     }
 
     public void GameSet() {

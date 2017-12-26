@@ -48,7 +48,7 @@ public class BoardAddCheckersTest {
     }
 
     @After
-    public void TearDown() {
+    public void cleanUp() {
         b = null;
     }
 }

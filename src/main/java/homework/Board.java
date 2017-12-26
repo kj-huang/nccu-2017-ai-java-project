@@ -91,5 +91,8 @@ public class Board {
         return true;
     }
 
+    public void resetBoard(){
+
+    }
 
 }

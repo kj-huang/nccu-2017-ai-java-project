@@ -12,14 +12,15 @@ public class StartGameState implements GameState {
     }
 
     public void Start(String args) {
-        //TODO initialize Board Checker
         if(args.contains(".txt")) {
+            //TODO file handler add checkers
             File file = new File(args);
         }
         else{
             board.fillHome();
         }
 
+        //board set Terminal State
         agent.setState(agent.getReadBoardState());
     }
 

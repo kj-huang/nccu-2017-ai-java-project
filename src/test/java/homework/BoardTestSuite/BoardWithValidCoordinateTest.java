@@ -52,7 +52,7 @@ public class BoardWithValidCoordinateTest {
     }
 
     @After
-    public void deleteOutputFile() {
+    public void cleanUp() {
         b = null;
     }
 }

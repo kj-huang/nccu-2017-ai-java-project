@@ -15,7 +15,12 @@ public class ReadBoardState implements GameState{
     public void ReadBoard() {
         //TODO getChecker the board information
 
-        agent.setState(agent.getSelectOneCheckerState());
+
+        if(true)
+            agent.setState(agent.getSelectOneCheckerState());
+        else {
+            agent.setState(agent.getGameSetState());
+        }
     }
 
     public void SelectOneChecker() {

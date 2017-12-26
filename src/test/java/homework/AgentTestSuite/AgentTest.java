@@ -1,14 +1,25 @@
-package homework;
+package homework.AgentTestSuite;
 
+import homework.Agent;
+import homework.Board;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class AgentTest {
+
+    private Board board;
+    private Agent agent;
+
+    @Before
+    public void setUp(){
+        board = new Board();
+        agent = new Agent(board);
+    }
+
     @Test
     public void ItShouldChangeStateRespectfully(){
-        Board board = new Board();
-        Agent agent = new Agent(board);
-
         agent.setState(agent.getReadBoardState());
         Assert.assertEquals(agent.getState(), agent.getReadBoardState());
 
@@ -24,9 +35,6 @@ public class AgentTest {
 
     @Test
     public void ItShouldSetUpTheGame(){
-        Board board = new Board();
-        Agent agent = new Agent(board);
-
         agent.StartGame("fixed");
 
         Assert.assertEquals(true,board.checkerExistAt(2,-5));
@@ -35,9 +43,6 @@ public class AgentTest {
 
     @Test
     public void ItShouldChangeTheStateAfterReadTheBoard(){
-        Board board = new Board();
-        Agent agent = new Agent(board);
-
         agent.StartGame("fixed");
         agent.ReadBoard();
 
@@ -62,8 +67,6 @@ public class AgentTest {
 
     @Test
     public void ItShouldChangeTheStateAfterSelectTheChecker(){
-        Board board = new Board();
-        Agent agent = new Agent(board);
 
         agent.StartGame("fixed");
         agent.ReadBoard();
@@ -77,8 +80,6 @@ public class AgentTest {
 
     @Test
     public void ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame(){
-        Board board = new Board();
-        Agent agent = new Agent(board);
 
         agent.StartGame("fixed");
         agent.ReadBoard();
@@ -92,4 +93,10 @@ public class AgentTest {
 
 //    @Test
 //    public void ItShouldFinishTheGame(){}
+
+    @After
+    public void cleanUp(){
+        board = null;
+        agent = null;
+    }
 }
