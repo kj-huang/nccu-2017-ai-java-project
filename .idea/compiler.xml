@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="nccu-2017-ai-java-project.git" target="1.5" />
+      <module name="nccu-2017-ai-java-project.git" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
