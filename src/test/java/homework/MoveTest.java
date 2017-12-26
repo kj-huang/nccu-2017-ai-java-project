@@ -1,75 +1,77 @@
-package homework.AlgorithmTestSuite;
+package homework;
 
-import homework.Checker;
-import homework.Jump;
+
+import homework.Move;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import homework.Checker;
 
-public class JumpTest {
+
+public class MoveTest {
 
     private Checker c;
-    private Jump jump;
+    private Move move;
 
     @Before
     public void initialize(){
         c = new Checker(0,0);
-        jump = new Jump(c);
+        move = new Move(c);
         System.out.print("(" + c.getX() + "," + c.getY() + ");");
     }
 
     @Test
     public void MoveRightUp(){
-        jump.RightUp();
+        move.RightUp();
 
         Assert.assertEquals(0, c.getX());
-        Assert.assertEquals(2, c.getY());
+        Assert.assertEquals(1, c.getY());
     }
 
     @Test
     public void MoveLeftUp(){
-        jump.LeftUp();
+        move.LeftUp();
 
-        Assert.assertEquals(-2, c.getX());
-        Assert.assertEquals(2, c.getY());
+        Assert.assertEquals(-1, c.getX());
+        Assert.assertEquals(1, c.getY());
     }
 
     @Test
     public void MoveLeft(){
-        jump.Left();
+        move.Left();
 
-        Assert.assertEquals(-2, c.getX());
+        Assert.assertEquals(-1, c.getX());
         Assert.assertEquals(0, c.getY());
     }
 
     @Test
     public void MoveRight(){
-        jump.Right();
+        move.Right();
 
-        Assert.assertEquals(2, c.getX());
+        Assert.assertEquals(1, c.getX());
         Assert.assertEquals(0, c.getY());
     }
 
     @Test
     public void MoveLeftDown(){
-        jump.LeftDown();
+        move.LeftDown();
 
         Assert.assertEquals(0, c.getX());
-        Assert.assertEquals(-2, c.getY());
+        Assert.assertEquals(-1, c.getY());
     }
 
     @Test
     public void MoveRightDown(){
-        jump.DownRight();
+        move.DownRight();
 
-        Assert.assertEquals(2, c.getX());
-        Assert.assertEquals(-2, c.getY());
+        Assert.assertEquals(1, c.getX());
+        Assert.assertEquals(-1, c.getY());
     }
 
     @After
     public void cleanUp(){
         c = null;
-        jump = null;
+        move = null;
     }
 }

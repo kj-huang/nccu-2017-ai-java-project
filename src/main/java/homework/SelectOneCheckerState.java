@@ -1,10 +1,12 @@
 package homework;
 
 public class SelectOneCheckerState implements GameState {
+    private Board board;
     private Agent agent;
 
-    public SelectOneCheckerState(Agent agent) {
+    SelectOneCheckerState(Agent agent, Board board) {
         this.agent = agent;
+        this.board = board;
     }
 
     public void Start(String args) {
@@ -15,10 +17,12 @@ public class SelectOneCheckerState implements GameState {
         System.out.println("You should choose a checker");
     }
 
-    public void SelectOneChecker() {
+    public Checker SelectOneChecker() {
         //TODO algorithm to decide select a checker
-
+        Checker checker = board.getCheckerFromLocation(0,-4);
         agent.setState(agent.getFinishMoveState());
+
+        return checker;
     }
 
     public void FinishMove() {

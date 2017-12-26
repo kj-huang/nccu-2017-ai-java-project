@@ -66,13 +66,20 @@ public class Board {
         return (isValidateCoordinate(x, y) && (grid[x+8][y+8] == 1));
     }
 
-    //TODO
     public Checker getCheckerFromLocation(int x, int y){
         for (Checker checker: checkers) {
             if(checker.getX() == x && checker.getY() == y && isValidateCoordinate(x, y))
-                return new Checker(x,y);
+                return checker;
         }
-        return new Checker(0,0);
+        return null;
+    }
+
+    public void updatedBoard(){
+        resetBoard();
+        for (Checker checker: checkers) {
+           // System.out.println("x: " + checker.getX() + ", y:" + checker.getY());
+            grid[checker.getX()+8][checker.getY()+8] = 1;
+        }
     }
 
     public void fillHome(){
@@ -88,11 +95,13 @@ public class Board {
     }
 
     public boolean isFillWithTargetArea(){
-        return true;
+        return false;
     }
 
     public void resetBoard(){
-
+        for (int i = 0; i < grid.length; i++)
+            for (int j = 0; j < grid[i].length; j++)
+                if(grid[i][j] == 1)
+                    grid[i][j] = 0;
     }
-
 }

@@ -6,7 +6,7 @@ public class StartGameState implements GameState {
     private Agent agent;
     private Board board;
 
-    public StartGameState(Agent agent, Board board) {
+    StartGameState(Agent agent, Board board) {
         this.agent = agent;
         this.board = board;
     }
@@ -28,8 +28,9 @@ public class StartGameState implements GameState {
         System.out.println("You haven't initialize Board yet");
     }
 
-    public void SelectOneChecker() {
+    public Checker SelectOneChecker() {
         System.out.println("Please Select a checker");
+        return null;
     }
 
     public void FinishMove() {

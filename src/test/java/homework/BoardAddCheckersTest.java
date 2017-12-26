@@ -1,4 +1,4 @@
-package homework.BoardTestSuite;
+package homework;
 
 import homework.Board;
 import org.junit.After;

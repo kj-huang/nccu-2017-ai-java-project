@@ -1,11 +1,12 @@
 package homework;
 
 public class ReadBoardState implements GameState{
+    private Board board;
     private Agent agent;
 
-    public ReadBoardState(Agent agent) {
-
+    ReadBoardState(Agent agent, Board board) {
         this.agent = agent;
+        this.board = board;
     }
 
     public void Start(String args) {
@@ -13,18 +14,16 @@ public class ReadBoardState implements GameState{
     }
 
     public void ReadBoard() {
-        //TODO getChecker the board information
-
-
-        if(true)
-            agent.setState(agent.getSelectOneCheckerState());
-        else {
+        if(board.isFillWithTargetArea())
             agent.setState(agent.getGameSetState());
+        else {
+            agent.setState(agent.getSelectOneCheckerState());
         }
     }
 
-    public void SelectOneChecker() {
+    public Checker SelectOneChecker() {
         System.out.println("please check the board first");
+        return null;
     }
 
     public void FinishMove() {

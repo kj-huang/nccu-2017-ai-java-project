@@ -16,10 +16,10 @@ public class Agent {
 
         this.board = board;
         StartGameState = new StartGameState(this, board);
-        ReadBoardState = new ReadBoardState(this);
-        SelectOneCheckerState = new SelectOneCheckerState(this);
-        FinishMoveState = new FinishMoveState(this);
-        GameSetState = new GameSetState(this);
+        ReadBoardState = new ReadBoardState(this, board);
+        SelectOneCheckerState = new SelectOneCheckerState(this, board);
+        FinishMoveState = new FinishMoveState(this, board);
+        GameSetState = new GameSetState(this, board);
         state = new StartGameState(this, board);
     }
 
@@ -31,8 +31,8 @@ public class Agent {
         state.ReadBoard();
     }
 
-    public void SelectOneChecker(){
-        state.SelectOneChecker();
+    public Checker SelectOneChecker(){
+        return state.SelectOneChecker();
     }
 
     public void FinishMove(){

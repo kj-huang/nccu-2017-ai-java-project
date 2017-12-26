@@ -1,10 +1,16 @@
 package homework;
 
 public class FinishMoveState implements GameState{
+    private Board board;
     private Agent agent;
 
     public FinishMoveState(Agent agent) {
         this.agent = agent;
+    }
+
+    FinishMoveState(Agent agent, Board board) {
+        this.agent = agent;
+        this.board = board;
     }
 
     public void Start(String args) {
@@ -15,15 +21,16 @@ public class FinishMoveState implements GameState{
         System.out.println("You already read the board");
     }
 
-    public void SelectOneChecker() {
+    public Checker SelectOneChecker() {
         System.out.println("You already choose a checker");
+        return null;
     }
 
     public void FinishMove() {
         //TODO algorithm decide to move the checkers to the longest move
-
         //TODO print out the moving log
 
+        board.updatedBoard();
         agent.setState(agent.getReadBoardState());
     }
 

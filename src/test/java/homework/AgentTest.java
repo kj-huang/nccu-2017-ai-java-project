@@ -1,7 +1,8 @@
-package homework.AgentTestSuite;
+package homework;
 
 import homework.Agent;
 import homework.Board;
+import homework.Checker;
 import org.junit.*;
 
 public class AgentTest {
@@ -46,7 +47,7 @@ public class AgentTest {
     }
 
 //    @Test
-//    public void ItShouldSelectTheChecker(){}
+////    public void ItShouldSelectTheChecker(){}
 
 //    @Test
 //    public void ItShouldChangeTheStateToGameSetAfterReadTheBoard(){
@@ -72,7 +73,14 @@ public class AgentTest {
     }
 
     @Test
-    public void ItShouldMoveTheChecker(){}
+    public void ItShouldMoveTheChecker(){
+        agent.StartGame("fixed");
+        agent.ReadBoard();
+        Checker c = agent.SelectOneChecker();
+
+        Assert.assertEquals(0, c.getX());
+        Assert.assertEquals(-4, c.getY());
+    }
 
     @Test
     public void ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame(){

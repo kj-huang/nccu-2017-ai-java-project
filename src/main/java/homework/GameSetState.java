@@ -2,10 +2,12 @@ package homework;
 
 public class GameSetState implements GameState{
 
+    private Board board;
     private Agent agent;
 
-    public GameSetState(Agent agent) {
+     GameSetState(Agent agent, Board board) {
         this.agent = agent;
+        this.board = board;
     }
 
     public void Start(String args) {
@@ -16,8 +18,9 @@ public class GameSetState implements GameState{
         System.out.println("You already finish a game");
     }
 
-    public void SelectOneChecker() {
+    public Checker SelectOneChecker() {
         System.out.println("You already finish a game");
+        return null;
     }
 
     public void FinishMove() {
@@ -26,7 +29,9 @@ public class GameSetState implements GameState{
 
     public void GameSet() {
         //TODO print out how many times of moving to finish the game
+//        agent.getCount();
 
         //TODO Destroy the board and Checkers
+
     }
 }
