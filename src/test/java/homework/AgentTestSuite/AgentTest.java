@@ -2,13 +2,9 @@ package homework.AgentTestSuite;
 
 import homework.Agent;
 import homework.Board;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 public class AgentTest {
-
     private Board board;
     private Agent agent;
 
