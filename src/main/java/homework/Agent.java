@@ -1,13 +1,13 @@
 package homework;
 
 public class Agent {
-    private GameState StartGameState;
+//    private GameState StartGameState;
     private GameState ReadBoardState;
     private GameState SelectOneCheckerState;
     private GameState FinishMoveState;
     private GameState GameSetState;
 
-    GameState state = StartGameState;
+    private GameState state = new StartGameState(this);
     private int count;
     private Board board;
 
@@ -16,7 +16,7 @@ public class Agent {
 
         this.board = board;
 
-        StartGameState = new StartGameState(this);
+//        StartGameState = new StartGameState(this);
         ReadBoardState = new ReadBoardState(this);
         SelectOneCheckerState = new SelectOneCheckerState(this);
         FinishMoveState = new FinishMoveState(this);
@@ -41,6 +41,10 @@ public class Agent {
 
     public void GameSet(){
         state.GameSet();
+    }
+
+    public GameState getState(){
+        return state;
     }
 
     public int getCount() {
