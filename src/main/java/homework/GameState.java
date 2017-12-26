@@ -1,7 +1,7 @@
 package homework;
 
 public interface GameState {
-    void Start();
+    void Start(String args);
     void ReadBoard();
     void SelectOneChecker();
     void FinishMove();

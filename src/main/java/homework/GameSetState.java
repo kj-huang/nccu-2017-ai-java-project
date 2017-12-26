@@ -8,7 +8,7 @@ public class GameSetState implements GameState{
         this.agent = agent;
     }
 
-    public void Start() {
+    public void Start(String args) {
         System.out.println("You already finish a game");
     }
 

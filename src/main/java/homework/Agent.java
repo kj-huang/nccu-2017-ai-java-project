@@ -1,7 +1,7 @@
 package homework;
 
 public class Agent {
-//    private GameState StartGameState;
+    private GameState StartGameState;
     private GameState ReadBoardState;
     private GameState SelectOneCheckerState;
     private GameState FinishMoveState;
@@ -16,15 +16,15 @@ public class Agent {
 
         this.board = board;
 
-//        StartGameState = new StartGameState(this);
+        StartGameState = new StartGameState(this, board);
         ReadBoardState = new ReadBoardState(this);
         SelectOneCheckerState = new SelectOneCheckerState(this);
         FinishMoveState = new FinishMoveState(this);
         GameSetState = new GameSetState(this);
     }
 
-    public void StartGame(){
-        state.Start();
+    public void StartGame(String arg){
+        state.Start(arg);
     }
 
     public void ReadBoard(){

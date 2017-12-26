@@ -7,7 +7,7 @@ public class SelectOneCheckerState implements GameState {
         this.agent = agent;
     }
 
-    public void Start() {
+    public void Start(String args) {
         System.out.println("You already start a game");
     }
 

@@ -1,14 +1,24 @@
 package homework;
 
+import java.io.File;
+
 public class StartGameState implements GameState {
     private Agent agent;
+    private Board board;
 
-    public StartGameState(Agent agent) {
+    public StartGameState(Agent agent, Board board) {
         this.agent = agent;
+        this.board = board;
     }
 
-    public void Start() {
-        //TODO initialize Board Checkers
+    public void Start(String args) {
+        //TODO initialize Board Checker
+        if(args.contains(".txt")) {
+            File file = new File(args);
+        }
+        else{
+            board.fillHome();
+        }
 
         agent.setState(agent.getReadBoardState());
     }

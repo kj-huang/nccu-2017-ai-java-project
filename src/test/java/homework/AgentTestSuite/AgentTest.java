@@ -22,33 +22,23 @@ public class AgentTest {
         Assert.assertEquals(agent.getState(), agent.getGameSetState());
     }
 
-//    @Test
-//    public void ItShouldSetUpTheGame(){
-//        Board board = new Board();
-//        Agent agent = new Agent(board);
-//
-//        //TODO ADD Test to verify to add checkers correctly
-//    }
-
     @Test
-    public void ItShouldChangeTheStateAfterSetUpTheGame(){
+    public void ItShouldSetUpTheGame(){
         Board board = new Board();
         Agent agent = new Agent(board);
 
-        agent.StartGame();
+        agent.StartGame("fixed");
 
-        Assert.assertSame(agent.getState(), agent.getReadBoardState());
+        Assert.assertEquals(true,board.checkerExistAt(2,-5));
+        Assert.assertEquals(true,board.checkerExistAt(4,-8));
     }
-
-//    @Test
-//    public void ItShouldGetTheBoardInformation(){}
 
     @Test
     public void ItShouldChangeTheStateAfterReadTheBoard(){
         Board board = new Board();
         Agent agent = new Agent(board);
 
-        agent.StartGame();
+        agent.StartGame("fixed");
         agent.ReadBoard();
 
         Assert.assertSame(agent.getState(), agent.getSelectOneCheckerState());
@@ -57,12 +47,25 @@ public class AgentTest {
 //    @Test
 //    public void ItShouldSelectTheChecker(){}
 
+//    @Test
+//    public void ItShouldChangeTheStateToGameSetAfterReadTheBoard(){
+//        Board board = new Board();
+//        Agent agent = new Agent(board);
+//
+////        agent.StartGame();
+////        agent.ReadBoard();
+////        agent.SelectOneChecker();
+////        agent.FinishMove();
+//
+//        Assert.assertSame(agent.getState(), agent.getGameSetState());
+//    }
+
     @Test
     public void ItShouldChangeTheStateAfterSelectTheChecker(){
         Board board = new Board();
         Agent agent = new Agent(board);
 
-        agent.StartGame();
+        agent.StartGame("fixed");
         agent.ReadBoard();
         agent.SelectOneChecker();
 
@@ -77,7 +80,7 @@ public class AgentTest {
         Board board = new Board();
         Agent agent = new Agent(board);
 
-        agent.StartGame();
+        agent.StartGame("fixed");
         agent.ReadBoard();
         agent.SelectOneChecker();
         agent.FinishMove();
@@ -85,18 +88,7 @@ public class AgentTest {
         Assert.assertSame(agent.getState(), agent.getReadBoardState());
     }
 
-//    @Test
-//    public void ItShouldChangeTheStateAfterFinishTheMoveWithGameSet(){
-//        Board board = new Board();
-//        Agent agent = new Agent(board);
-//
-////        agent.StartGame();
-////        agent.ReadBoard();
-////        agent.SelectOneChecker();
-////        agent.FinishMove();
-//
-//        Assert.assertSame(agent.getState(), agent.getGameSetState());
-//    }
+
 
 //    @Test
 //    public void ItShouldFinishTheGame(){}

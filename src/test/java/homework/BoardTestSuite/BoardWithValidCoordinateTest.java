@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class BoardInitializeTest {
+public class BoardWithValidCoordinateTest {
     private Board b;
 
     @Before
@@ -24,23 +24,23 @@ public class BoardInitializeTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                { -8, 4, 0 },
-                { -7, 3, 0 },
-                { 0, 2, 0 },
-                { 1, 0, 0 },
-                { -8, 5, -1 },
-                { 8, 3, -1 },
-                { -5, 0, -1 },
-                { 8, -3, -1 },
-                {0,3, 0}
+                { -8, 4, true },
+                { -7, 3, true },
+                { 0, 2, true },
+                { 1, 0, true },
+                { -8, 5, false },
+                { 8, 3, false },
+                { -5, 0, false },
+                { 8, -3, false },
+                {0,3, true}
         });
     }
 
     private int x;
     private int y;
-    private int expected;
+    private boolean expected;
 
-    public BoardInitializeTest(int x, int y, int expected) {
+    public BoardWithValidCoordinateTest(int x, int y, boolean expected) {
         this.x = x;
         this.y = y;
         this.expected = expected;
@@ -48,7 +48,7 @@ public class BoardInitializeTest {
 
     @Test
     public void test() {
-        Assert.assertEquals(expected, b.getChecker(x,y));
+        Assert.assertEquals(expected, b.isValidateCoordinate(x,y));
     }
 
     @After

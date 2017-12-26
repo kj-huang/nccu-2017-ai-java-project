@@ -23,19 +23,19 @@ public class BoardAddCheckersTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                {1, 0, 0},
-                {1, 1, 1},
-                {1, 5, -1},
-                {1, 2, 2},
-                {1, 3, 1}
+                {true, 0, 0},
+                {true, 1, 1},
+                {true, 5, -1},
+                {true, 2, 2},
+                {true, 3, 1}
         });
     }
 
     private int x;
     private int y;
-    private int expected;
+    private boolean expected;
 
-    public BoardAddCheckersTest(int expected, int x, int y) {
+    public BoardAddCheckersTest(boolean expected, int x, int y) {
         this.x = x;
         this.y = y;
         this.expected = expected;
@@ -44,7 +44,7 @@ public class BoardAddCheckersTest {
     @Test
     public void test() {
         b.addChecker(x, y);
-        Assert.assertEquals(expected, b.getChecker(x,y));
+        Assert.assertEquals(expected, b.checkerExistAt(x,y));
     }
 
     @After

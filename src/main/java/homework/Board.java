@@ -3,8 +3,6 @@ package homework;
 import java.util.ArrayList;
 
 public class Board {
-    GameState startState;
-    GameState finishState;
     private ArrayList<Checker> checkers;
 
     private static final int[][] grid = {
@@ -47,24 +45,25 @@ public class Board {
         checkers = new ArrayList<Checker>();
     }
 
-    private boolean isValidateCoordinate(int x, int y){
+    public boolean isValidateCoordinate(int x, int y){
         return grid[x + 8][y + 8] != -1;
     }
 
-    private boolean isEmpty(int x, int y){
+    private boolean isEmptySlot(int x, int y){
         return isValidateCoordinate(x,y) && grid[x + 8][y + 8] != 0;
     }
 
     public Board addChecker(int x, int y) {
-        if(!isEmpty(x,y)){
+        if(!isEmptySlot(x,y)){
             grid[x+8][y+8] = 1;
             checkers.add(new Checker(x,y));
         }
         return this;
     }
 
-    public int getChecker(int x, int y) {
-        return isValidateCoordinate(x, y) ? grid[x+8][y+8] : -1;
+
+    public boolean checkerExistAt(int x, int y) {
+        return (isValidateCoordinate(x, y) && (grid[x+8][y+8] == 1));
     }
 
     //TODO
@@ -77,10 +76,20 @@ public class Board {
     }
 
     public void fillHome(){
-
+        this.addChecker(0,-4).addChecker(1,-4).addChecker(2,-4).addChecker(3,-4).addChecker(4,-4);
+        this.addChecker(1,-5).addChecker(2,-5).addChecker(3,-5).addChecker(4,-5);
+        this.addChecker(2,-6).addChecker(3,-6).addChecker(4,-6);
+        this.addChecker(3,-7).addChecker(4,-7);
+        this.addChecker(4,-8);
     }
 
-    public void cleanUp(){
-
+    public int getRemainCheckersSku(){
+        return checkers.size();
     }
+
+    public boolean isFillWithTargetArea(){
+        return true;
+    }
+
+
 }
