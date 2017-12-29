@@ -10,7 +10,7 @@ public class GameSetState implements GameState{
         this.board = board;
     }
 
-    public void Start(String args) {
+    public void Start(String args, int terminal) {
         System.out.println("You already finish a game");
     }
 
@@ -23,7 +23,7 @@ public class GameSetState implements GameState{
         return null;
     }
 
-    public void FinishMove() {
+    public void FinishMove(Checker checker) {
         System.out.println("You already finish a game");
     }
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Board {
     private ArrayList<Checker> checkers;
+    private ArrayList<Point> terminalPoints;
 
     private static final int[][] grid = {
             { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0, -1, -1, -1, -1  }, //17
@@ -43,6 +44,7 @@ public class Board {
 
     public Board(){
         checkers = new ArrayList<Checker>();
+        terminalPoints = new ArrayList<Point>();
     }
 
     public boolean isValidateCoordinate(int x, int y){
@@ -75,7 +77,7 @@ public class Board {
     }
 
     public void updatedBoard(){
-        resetBoard();
+        cleanUpBoard();
         for (Checker checker: checkers) {
            // System.out.println("x: " + checker.getX() + ", y:" + checker.getY());
             grid[checker.getX()+8][checker.getY()+8] = 1;
@@ -90,15 +92,87 @@ public class Board {
         this.addChecker(4,-8);
     }
 
+    public void setGreenAreaAsDestination(){
+        if(getTerminalPointsCount() == 15)
+            return;
+        terminalPoints.add(new Point(-4,0));
+        terminalPoints.add(new Point(-4,1));
+        terminalPoints.add(new Point(-4,2));
+        terminalPoints.add(new Point(-4,3));
+        terminalPoints.add(new Point(-4,4));
+        terminalPoints.add(new Point(-5,1));
+        terminalPoints.add(new Point(-5,2));
+        terminalPoints.add(new Point(-5,3));
+        terminalPoints.add(new Point(-5,4));
+        terminalPoints.add(new Point(-6,2));
+        terminalPoints.add(new Point(-6,3));
+        terminalPoints.add(new Point(-6,4));
+        terminalPoints.add(new Point(-7,3));
+        terminalPoints.add(new Point(-7,4));
+        terminalPoints.add(new Point(-8,4));
+    }
+
+    public void setYellowAreaAsDestination(){
+        if(getTerminalPointsCount() == 15)
+            return;
+        terminalPoints.add(new Point(0,4));
+        terminalPoints.add(new Point(-1,4));
+        terminalPoints.add(new Point(-2,4));
+        terminalPoints.add(new Point(-3,4));
+        terminalPoints.add(new Point(-4,4));
+        terminalPoints.add(new Point(-1,5));
+        terminalPoints.add(new Point(-2,5));
+        terminalPoints.add(new Point(-3,5));
+        terminalPoints.add(new Point(-4,5));
+        terminalPoints.add(new Point(-2,6));
+        terminalPoints.add(new Point(-3,6));
+        terminalPoints.add(new Point(-4,6));
+        terminalPoints.add(new Point(-3,7));
+        terminalPoints.add(new Point(-4,7));
+        terminalPoints.add(new Point(-4,8));
+    }
+
+    public void setRedAreaAsDestination(){
+        if(getTerminalPointsCount() == 15)
+            return;
+        terminalPoints.add(new Point(0,4));
+        terminalPoints.add(new Point(1,3));
+        terminalPoints.add(new Point(2,2));
+        terminalPoints.add(new Point(3,1));
+        terminalPoints.add(new Point(4,0));
+        terminalPoints.add(new Point(1,4));
+        terminalPoints.add(new Point(2,3));
+        terminalPoints.add(new Point(3,2));
+        terminalPoints.add(new Point(4,1));
+        terminalPoints.add(new Point(2,4));
+        terminalPoints.add(new Point(3,3));
+        terminalPoints.add(new Point(4,2));
+        terminalPoints.add(new Point(3,4));
+        terminalPoints.add(new Point(4,3));
+        terminalPoints.add(new Point(4,4));
+    }
+
+    public int getTerminalPointsCount(){
+        return terminalPoints.size();
+    }
+
     public int getRemainCheckersSku(){
         return checkers.size();
     }
 
     public boolean isFillWithTargetArea(){
-        return false;
+        int counter = 0;
+        for (Checker checker:checkers) {
+            for(Point point: terminalPoints){
+                if(checker.getY() == point.getY() && checker.getX() == point.getX())
+                    counter++;
+            }
+        }
+
+        return counter ==  checkers.size() && checkers.size() > 0;
     }
 
-    public void resetBoard(){
+    public void cleanUpBoard(){
         for (int i = 0; i < grid.length; i++)
             for (int j = 0; j < grid[i].length; j++)
                 if(grid[i][j] == 1)

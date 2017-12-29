@@ -13,7 +13,7 @@ public class FinishMoveState implements GameState{
         this.board = board;
     }
 
-    public void Start(String args) {
+    public void Start(String args, int terminal) {
         System.out.println("You already start a game");
     }
 
@@ -26,9 +26,19 @@ public class FinishMoveState implements GameState{
         return null;
     }
 
-    public void FinishMove() {
+    public void FinishMove(Checker checker) {
         //TODO algorithm decide to move the checkers to the longest move
         //TODO print out the moving log
+
+
+
+        // 周圍都沒有棋子可跳
+        if(1==1){
+
+        }else{
+
+        }
+
 
         board.updatedBoard();
         agent.setState(agent.getReadBoardState());

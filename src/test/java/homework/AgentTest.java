@@ -1,8 +1,5 @@
 package homework;
 
-import homework.Agent;
-import homework.Board;
-import homework.Checker;
 import org.junit.*;
 
 public class AgentTest {
@@ -32,40 +29,64 @@ public class AgentTest {
 
     @Test
     public void ItShouldSetUpTheGame(){
-        agent.StartGame("fixed");
+        agent.StartGame("fixed", 1);
 
         Assert.assertEquals(true,board.checkerExistAt(2,-5));
         Assert.assertEquals(true,board.checkerExistAt(4,-8));
+        Assert.assertEquals(15, board.getTerminalPointsCount());
     }
 
     @Test
     public void ItShouldChangeTheStateAfterReadTheBoard(){
-        agent.StartGame("fixed");
+        agent.StartGame("fixed", 1);
         agent.ReadBoard();
 
         Assert.assertSame(agent.getState(), agent.getSelectOneCheckerState());
     }
 
-//    @Test
-////    public void ItShouldSelectTheChecker(){}
+    @Test
+    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtGreenArea(){
+        Board board = new Board();
+        Agent agent = new Agent(board);
 
-//    @Test
-//    public void ItShouldChangeTheStateToGameSetAfterReadTheBoard(){
-//        Board board = new Board();
-//        Agent agent = new Agent(board);
-//
-////        agent.StartGame();
-////        agent.ReadBoard();
-////        agent.SelectOneChecker();
-////        agent.FinishMove();
-//
-//        Assert.assertSame(agent.getState(), agent.getGameSetState());
-//    }
+        //1000 not set any checkers on to board
+        agent.StartGame("testEnv", 1);
+        board.addChecker(-8,4);
+        agent.ReadBoard();
+
+        Assert.assertSame(agent.getState(), agent.getGameSetState());
+    }
+
+    @Test
+    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtYellowArea(){
+        Board board = new Board();
+        Agent agent = new Agent(board);
+
+        //1000 not set any checkers on to board
+        agent.StartGame("testEnv", 2);
+        board.addChecker(-4,8);
+        agent.ReadBoard();
+
+        Assert.assertSame(agent.getState(), agent.getGameSetState());
+    }
+
+    @Test
+    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtRedArea(){
+        Board board = new Board();
+        Agent agent = new Agent(board);
+
+        //1000 not set any checkers on to board
+        agent.StartGame("testEnv", 3);
+        board.addChecker(4,1);
+        agent.ReadBoard();
+
+        Assert.assertSame(agent.getState(), agent.getGameSetState());
+    }
 
     @Test
     public void ItShouldChangeTheStateAfterSelectTheChecker(){
 
-        agent.StartGame("fixed");
+        agent.StartGame("fixed", 1);
         agent.ReadBoard();
         agent.SelectOneChecker();
 
@@ -74,7 +95,7 @@ public class AgentTest {
 
     @Test
     public void ItShouldMoveTheChecker(){
-        agent.StartGame("fixed");
+        agent.StartGame("fixed", 1);
         agent.ReadBoard();
         Checker c = agent.SelectOneChecker();
 
@@ -84,14 +105,16 @@ public class AgentTest {
     @Test
     public void ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame(){
 
-        agent.StartGame("fixed");
+        agent.StartGame("fixed", 1);
         agent.ReadBoard();
-        agent.SelectOneChecker();
-        agent.FinishMove();
+        Checker c = agent.SelectOneChecker();
+        agent.FinishMove(c);
 
         Assert.assertSame(agent.getState(), agent.getReadBoardState());
     }
 
+    //    @Test
+//    public void ItShouldSelectTheChecker(){}
 
 
 //    @Test

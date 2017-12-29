@@ -9,7 +9,7 @@ public class SelectOneCheckerState implements GameState {
         this.board = board;
     }
 
-    public void Start(String args) {
+    public void Start(String args, int terminal) {
         System.out.println("You already start a game");
     }
 
@@ -25,7 +25,7 @@ public class SelectOneCheckerState implements GameState {
         return checker;
     }
 
-    public void FinishMove() {
+    public void FinishMove(Checker checker) {
         System.out.println("You haven't move any Checkers yet");
     }
 

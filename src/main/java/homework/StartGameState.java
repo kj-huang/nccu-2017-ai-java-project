@@ -11,18 +11,40 @@ public class StartGameState implements GameState {
         this.board = board;
     }
 
-    public void Start(String args) {
+//    public void Start(String args) {
+//
+//    }
+
+    public void Start(String args, int terminal) {
         if(args.contains(".txt")) {
             //TODO file handler add checkers
             File file = new File(args);
+
+//            while(){
+//                board.addChecker();
+//            }
         }
-        else{
+        else if(args.equals("fixed")){
             board.fillHome();
+        }
+
+        switch (terminal){
+            case 1:
+                board.setGreenAreaAsDestination();
+                break;
+            case 2:
+                board.setYellowAreaAsDestination();
+                break;
+            case 3:
+                board.setRedAreaAsDestination();
+                break;
         }
 
         //board set Terminal State
         agent.setState(agent.getReadBoardState());
     }
+
+
 
     public void ReadBoard() {
         System.out.println("You haven't initialize Board yet");
@@ -33,7 +55,7 @@ public class StartGameState implements GameState {
         return null;
     }
 
-    public void FinishMove() {
+    public void FinishMove(Checker checker) {
         System.out.println("You haven't move any Checkers yet");
     }
 

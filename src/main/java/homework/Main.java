@@ -6,9 +6,9 @@ public class Main {
         Agent agent = new Agent(board);
 
         if(args[1] != null)
-            agent.StartGame(args[1]);
+            agent.StartGame(args[1], 1);
         else //TODO refactor to absolute test case
-            agent.StartGame("");
+            agent.StartGame("", 1);
 
 //        while(){
 //
