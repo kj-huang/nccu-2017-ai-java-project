@@ -25,8 +25,6 @@ public class IntegratedTest {
 
     @Test
     public void ItShouldJumpCheckerFrom00to20WithOneCheckerAt10 (){
-
-
         checkers.add(board.addChecker(0,0).getCheckerFromLocation(0,0 ));
         checkers.add(board.addChecker(1,0).getCheckerFromLocation(1,0 ));
         checkers.get(0).jump().Right();
