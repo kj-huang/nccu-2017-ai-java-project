@@ -50,13 +50,8 @@ public class StartGameState implements GameState {
         System.out.println("You haven't initialize Board yet");
     }
 
-    public Checker SelectOneChecker() {
+    public void SelectOneCheckerAndMove() {
         System.out.println("Please Select a checker");
-        return null;
-    }
-
-    public void FinishMove(Checker checker) {
-        System.out.println("You haven't move any Checkers yet");
     }
 
     public void GameSet() {

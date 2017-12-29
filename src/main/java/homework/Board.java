@@ -79,7 +79,6 @@ public class Board {
     public void updatedBoard(){
         cleanUpBoard();
         for (Checker checker: checkers) {
-           // System.out.println("x: " + checker.getX() + ", y:" + checker.getY());
             grid[checker.getX()+8][checker.getY()+8] = 1;
         }
     }

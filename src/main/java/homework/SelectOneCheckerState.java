@@ -17,16 +17,11 @@ public class SelectOneCheckerState implements GameState {
         System.out.println("You should choose a checker");
     }
 
-    public Checker SelectOneChecker() {
+    public void SelectOneCheckerAndMove() {
         //TODO algorithm to decide select a checker
         Checker checker = board.getCheckerFromLocation(0,-4);
         agent.setState(agent.getFinishMoveState());
 
-        return checker;
-    }
-
-    public void FinishMove(Checker checker) {
-        System.out.println("You haven't move any Checkers yet");
     }
 
     public void GameSet() {

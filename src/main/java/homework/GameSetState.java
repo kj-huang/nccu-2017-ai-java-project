@@ -18,12 +18,7 @@ public class GameSetState implements GameState{
         System.out.println("You already finish a game");
     }
 
-    public Checker SelectOneChecker() {
-        System.out.println("You already finish a game");
-        return null;
-    }
-
-    public void FinishMove(Checker checker) {
+    public void SelectOneCheckerAndMove() {
         System.out.println("You already finish a game");
     }
 

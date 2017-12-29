@@ -23,6 +23,10 @@ public class Agent {
         state = new StartGameState(this, board);
     }
 
+    public void preMoveTo(){}
+
+    public void preJumpTo(){}
+
     public void StartGame(String arg, int terminal){
         state.Start(arg, terminal);
     }
@@ -31,12 +35,8 @@ public class Agent {
         state.ReadBoard();
     }
 
-    public Checker SelectOneChecker(){
-        return state.SelectOneChecker();
-    }
-
-    public void FinishMove(Checker checker){
-        state.FinishMove(checker);
+    public void SelectOneCheckerAndMove(){
+        state.SelectOneCheckerAndMove();
     }
 
     public void GameSet(){

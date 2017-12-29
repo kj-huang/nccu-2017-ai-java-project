@@ -21,27 +21,8 @@ public class FinishMoveState implements GameState{
         System.out.println("You already read the board");
     }
 
-    public Checker SelectOneChecker() {
+    public void SelectOneCheckerAndMove() {
         System.out.println("You already choose a checker");
-        return null;
-    }
-
-    public void FinishMove(Checker checker) {
-        //TODO algorithm decide to move the checkers to the longest move
-        //TODO print out the moving log
-
-
-
-        // 周圍都沒有棋子可跳
-        if(1==1){
-
-        }else{
-
-        }
-
-
-        board.updatedBoard();
-        agent.setState(agent.getReadBoardState());
     }
 
     public void GameSet() {

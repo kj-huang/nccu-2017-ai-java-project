@@ -21,13 +21,8 @@ public class ReadBoardState implements GameState{
         }
     }
 
-    public Checker SelectOneChecker() {
+    public void SelectOneCheckerAndMove() {
         System.out.println("please check the board first");
-        return null;
-    }
-
-    public void FinishMove(Checker checker) {
-        System.out.println("You haven't move any Checkers yet");
     }
 
     public void GameSet() {

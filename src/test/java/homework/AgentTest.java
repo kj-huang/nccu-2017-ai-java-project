@@ -88,29 +88,9 @@ public class AgentTest {
 
         agent.StartGame("fixed", 1);
         agent.ReadBoard();
-        agent.SelectOneChecker();
+        agent.SelectOneCheckerAndMove();
 
         Assert.assertSame(agent.getState(), agent.getFinishMoveState());
-    }
-
-    @Test
-    public void ItShouldMoveTheChecker(){
-        agent.StartGame("fixed", 1);
-        agent.ReadBoard();
-        Checker c = agent.SelectOneChecker();
-
-        Assert.assertEquals(true,board.checkerExistAt(0,-4));
-    }
-
-    @Test
-    public void ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame(){
-
-        agent.StartGame("fixed", 1);
-        agent.ReadBoard();
-        Checker c = agent.SelectOneChecker();
-        agent.FinishMove(c);
-
-        Assert.assertSame(agent.getState(), agent.getReadBoardState());
     }
 
     //    @Test
