@@ -2,6 +2,9 @@ package homework;
 
 import org.junit.*;
 
+import java.io.IOException;
+
+
 public class AgentTest {
     private Board board;
     private Agent agent;
@@ -28,7 +31,18 @@ public class AgentTest {
     }
 
     @Test
-    public void ItShouldSetUpTheGame(){
+    public void ItShouldSetUpTheGameWithFileNameAsParameter() throws IOException {
+        String fileName = "obstacle.txt";
+        agent.StartGame(fileName, 1);
+
+
+        Assert.assertEquals(3, board.getObstacleCheckersSku());
+        Assert.assertEquals(true, board.checkerExistAt(0,0));
+    }
+
+
+    @Test
+    public void ItShouldSetUpTheGameWithFixedAsParameter() throws IOException {
         agent.StartGame("fixed", 1);
 
         Assert.assertEquals(true,board.checkerExistAt(2,-5));
@@ -37,7 +51,7 @@ public class AgentTest {
     }
 
     @Test
-    public void ItShouldChangeTheStateAfterReadTheBoard(){
+    public void ItShouldChangeTheStateAfterReadTheBoard() throws IOException {
         agent.StartGame("fixed", 1);
         agent.ReadBoard();
 
@@ -45,7 +59,7 @@ public class AgentTest {
     }
 
     @Test
-    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtGreenArea(){
+    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtGreenArea() throws IOException {
         Board board = new Board();
         Agent agent = new Agent(board);
 
@@ -58,7 +72,7 @@ public class AgentTest {
     }
 
     @Test
-    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtYellowArea(){
+    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtYellowArea() throws IOException {
         Board board = new Board();
         Agent agent = new Agent(board);
 
@@ -71,20 +85,20 @@ public class AgentTest {
     }
 
     @Test
-    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtRedArea(){
+    public void ItShouldChangeTheStateToGameSetAfterReadTheBoardWithCheckersAllAtRedArea() throws IOException {
         Board board = new Board();
         Agent agent = new Agent(board);
 
         //1000 not set any checkers on to board
         agent.StartGame("testEnv", 3);
-        board.addChecker(4,1);
+        board.addChecker(-4,-1);
         agent.ReadBoard();
 
         Assert.assertSame(agent.getState(), agent.getGameSetState());
     }
 
     @Test
-    public void ItShouldChangeTheStateAfterSelectTheChecker(){
+    public void ItShouldChangeTheStateAfterSelectTheChecker() throws IOException {
 
         agent.StartGame("fixed", 1);
         agent.ReadBoard();

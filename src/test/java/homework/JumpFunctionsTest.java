@@ -1,77 +1,75 @@
 package homework;
 
-
-import homework.Move;
+import homework.Checker;
+import homework.Jump;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import homework.Checker;
 
-
-public class MoveTest {
+public class JumpFunctionsTest {
 
     private Checker c;
-    private Move move;
+    private Jump jump;
 
     @Before
     public void initialize(){
         c = new Checker(0,0);
-        move = new Move(c);
+        jump = new Jump(c);
         System.out.print("(" + c.getX() + "," + c.getY() + ");");
     }
 
     @Test
     public void MoveRightUp(){
-        move.RightUp();
+        jump.RightUp();
 
         Assert.assertEquals(0, c.getX());
-        Assert.assertEquals(1, c.getY());
+        Assert.assertEquals(2, c.getY());
     }
 
     @Test
     public void MoveLeftUp(){
-        move.LeftUp();
+        jump.LeftUp();
 
-        Assert.assertEquals(-1, c.getX());
-        Assert.assertEquals(1, c.getY());
+        Assert.assertEquals(-2, c.getX());
+        Assert.assertEquals(2, c.getY());
     }
 
     @Test
     public void MoveLeft(){
-        move.Left();
+        jump.Left();
 
-        Assert.assertEquals(-1, c.getX());
+        Assert.assertEquals(-2, c.getX());
         Assert.assertEquals(0, c.getY());
     }
 
     @Test
     public void MoveRight(){
-        move.Right();
+        jump.Right();
 
-        Assert.assertEquals(1, c.getX());
+        Assert.assertEquals(2, c.getX());
         Assert.assertEquals(0, c.getY());
     }
 
     @Test
     public void MoveLeftDown(){
-        move.LeftDown();
+        jump.LeftDown();
 
         Assert.assertEquals(0, c.getX());
-        Assert.assertEquals(-1, c.getY());
+        Assert.assertEquals(-2, c.getY());
     }
 
     @Test
     public void MoveRightDown(){
-        move.DownRight();
+        jump.DownRight();
 
-        Assert.assertEquals(1, c.getX());
-        Assert.assertEquals(-1, c.getY());
+        Assert.assertEquals(2, c.getX());
+        Assert.assertEquals(-2, c.getY());
     }
 
     @After
     public void cleanUp(){
         c = null;
-        move = null;
+        jump = null;
     }
 }

@@ -1,9 +1,6 @@
 package homework;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 
 
 public class BoardUtilityTest {
@@ -14,7 +11,7 @@ public class BoardUtilityTest {
         board = new Board();
     }
 
-    @Ignore("Test Will affect with Board Test")
+//    @Ignore("Test Will affect with Board Test")
     @Test
     public void ItShouldGet15CheckersIfFillHome(){
         //TODO fix the test
@@ -95,7 +92,11 @@ public class BoardUtilityTest {
     @Test
     public void ItShouldReturnFalseWithNoAllCheckersAtTerminal(){
         board.setRedAreaAsDestination();
-        board.addChecker(0,0).addChecker(1,3).addChecker(4,4);;
+        board.addChecker(0,4).addChecker(1,3).addChecker(4,4);
+
+        board.getCheckerFromLocation(0,4).setX(0);
+        board.getCheckerFromLocation(0,4).setY(0);
+        board.updatedBoard();
 
         Assert.assertEquals(false, board.isFillWithTargetArea());
     }
@@ -103,8 +104,46 @@ public class BoardUtilityTest {
     @Test
     public void ItShouldReturnTrueWithAllCheckersAtTerminal(){
         board.setRedAreaAsDestination();
-        board.addChecker(0,4).addChecker(1,3).addChecker(4,4);
+        board.addChecker(0,-4).addChecker(-1,-3).addChecker(-4,-4);
 
         Assert.assertEquals(true, board.isFillWithTargetArea());
+    }
+
+    @Test
+    public void ItShouldReturnTrueWithAllPointsAtMiddleArea(){
+        Assert.assertEquals(true, board.isMiddleArea(0,0));
+        Assert.assertEquals(true, board.isMiddleArea(-3,0));
+        Assert.assertEquals(true, board.isMiddleArea(2,1));
+        Assert.assertEquals(true, board.isMiddleArea(1,2));
+        Assert.assertEquals(true, board.isMiddleArea(0,-3));
+        Assert.assertEquals(true, board.isMiddleArea(3,-3));
+        Assert.assertEquals(true, board.isMiddleArea(0,3));
+        Assert.assertEquals(true, board.isMiddleArea(-3,3));
+    }
+
+    @Test
+    public void ItShouldReturnFalseWithAllPointsNotAtMiddleArea(){
+        Assert.assertEquals(false, board.isMiddleArea(4,1));
+        Assert.assertEquals(false, board.isMiddleArea(-1,-3));
+        Assert.assertEquals(false, board.isMiddleArea(1,4));
+        Assert.assertEquals(false, board.isMiddleArea(4,0));
+        Assert.assertEquals(false, board.isMiddleArea(4,-4));
+        Assert.assertEquals(false, board.isMiddleArea(0,-4));
+        Assert.assertEquals(false, board.isMiddleArea(1,3));
+        Assert.assertEquals(false, board.isMiddleArea(-4,8));
+    }
+
+    @Test
+    public void ItShouldGetTwoCheckersAndOneObstacleCheckers(){
+        board.addChecker(0,0).addChecker(1,3).addChecker(4,4);
+
+        Assert.assertEquals(2, board.getRemainCheckersSku());
+        Assert.assertEquals(1, board.getObstacleCheckersSku());
+    }
+
+    @After
+    public void tearDown(){
+        board.cleanUpBoard();
+        board.destroyAllObjectsOnTheBoard();
     }
 }

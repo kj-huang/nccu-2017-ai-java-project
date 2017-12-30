@@ -1,30 +1,53 @@
 package homework;
 
-import java.io.File;
+import java.io.*;
+import java.util.Arrays;
+import java.util.List;
+
+import static java.lang.Integer.parseInt;
 
 public class StartGameState implements GameState {
-    private Agent agent;
-    private Board board;
+    private final Agent agent;
+    private final Board board;
 
     StartGameState(Agent agent, Board board) {
         this.agent = agent;
         this.board = board;
     }
 
-//    public void Start(String args) {
-//
-//    }
+    public void Start(String fileName, int terminal) throws IOException {
 
-    public void Start(String args, int terminal) {
-        if(args.contains(".txt")) {
-            //TODO file handler add checkers
-            File file = new File(args);
+        if(fileName.contains(".txt")) {
 
-//            while(){
-//                board.addChecker();
-//            }
+            BufferedReader br = null;
+
+            try {
+                br = new BufferedReader(new FileReader(fileName));
+
+                String sCurrentLine;
+                sCurrentLine = br.readLine(); //get how many inputs
+
+                while ((sCurrentLine = br.readLine()) != null) {
+
+                    sCurrentLine = sCurrentLine.replaceAll("[^-?0-9]+", " ");
+                    List<String> output = Arrays.asList(sCurrentLine.trim().split(" "));
+                    board.addChecker(parseInt(output.get(0)),parseInt(output.get(1)));
+                }
+
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                if (br != null) {
+                    try {
+                        br.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
         }
-        else if(args.equals("fixed")){
+        else if(fileName.equals("fixed")){
             board.fillHome();
         }
 
