@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Board {
     private ArrayList<Checker> checkers;
-    private ArrayList<Checker> obstacleCheckers;
     private ArrayList<Point> terminalPoints;
 
     private static final int[][] grid = {
@@ -45,7 +44,6 @@ public class Board {
 
     public Board(){
         checkers = new ArrayList<Checker>();
-        obstacleCheckers = new ArrayList<Checker>();
         terminalPoints = new ArrayList<Point>();
     }
 
@@ -60,23 +58,11 @@ public class Board {
     public Board addChecker(int x, int y) {
         if(!isEmptySlot(x,y)){
             grid[x+8][y+8] = 1;
-
-            if(!isMiddleArea(x,y))
-                checkers.add(new Checker(x,y));
-            else
-                obstacleCheckers.add(new Checker(x,y));
+            checkers.add(new Checker(x,y));
         }
         return this;
     }
 
-    public boolean isMiddleArea(int x, int y){
-        boolean bottomRight =  (x <= 3 && y >= -3) && (x >= 0 && y <= 0);
-        boolean topLeft =  (x >= -3 && y <= 3) && (x <= 0 && y >= 0);
-        boolean bottomLeft =  (x == -1 && ((y >= -2) && y <= 0)) || (x == -2 && y == -1);
-        boolean topRight =  (x == 1 && ((y <= 2) && y >= 0)) || (x == 2 && y == 1);
-
-        return bottomRight || bottomLeft || topLeft || topRight;
-    }
 
     public boolean checkerExistAt(int x, int y) {
         return (isValidateCoordinate(x, y) && (grid[x+8][y+8] == 1));
@@ -148,21 +134,21 @@ public class Board {
     public void setRedAreaAsDestination(){
         if(getTerminalPointsCount() == 15)
             return;
-        terminalPoints.add(new Point(0,-4));
-        terminalPoints.add(new Point(-1,-3));
-        terminalPoints.add(new Point(-1,-4));
-        terminalPoints.add(new Point(-2,-2));
-        terminalPoints.add(new Point(-2,-3));
-        terminalPoints.add(new Point(-2,-4));
-        terminalPoints.add(new Point(-3,-1));
-        terminalPoints.add(new Point(-3,-2));
-        terminalPoints.add(new Point(-3,-3));
-        terminalPoints.add(new Point(-3,-4));
-        terminalPoints.add(new Point(-4,0));
-        terminalPoints.add(new Point(-4,-1));
-        terminalPoints.add(new Point(-4,-2));
-        terminalPoints.add(new Point(-4,-3));
-        terminalPoints.add(new Point(-4,-4));
+        terminalPoints.add(new Point(0,4));
+        terminalPoints.add(new Point(1,3));
+        terminalPoints.add(new Point(2,2));
+        terminalPoints.add(new Point(3,1));
+        terminalPoints.add(new Point(4,0));
+        terminalPoints.add(new Point(1,4));
+        terminalPoints.add(new Point(2,3));
+        terminalPoints.add(new Point(3,2));
+        terminalPoints.add(new Point(4,1));
+        terminalPoints.add(new Point(2,4));
+        terminalPoints.add(new Point(3,3));
+        terminalPoints.add(new Point(4,2));
+        terminalPoints.add(new Point(3,4));
+        terminalPoints.add(new Point(4,3));
+        terminalPoints.add(new Point(4,4));
     }
 
     public int getTerminalPointsCount(){
@@ -171,10 +157,6 @@ public class Board {
 
     public int getRemainCheckersSku(){
         return checkers.size();
-    }
-
-    public int getObstacleCheckersSku(){
-        return obstacleCheckers.size();
     }
 
     public boolean isFillWithTargetArea(){
@@ -194,11 +176,5 @@ public class Board {
             for (int j = 0; j < grid[i].length; j++)
                 if(grid[i][j] == 1)
                     grid[i][j] = 0;
-    }
-
-    public void destroyAllObjectsOnTheBoard(){
-        checkers.clear();
-        obstacleCheckers.clear();
-        terminalPoints.clear();
     }
 }

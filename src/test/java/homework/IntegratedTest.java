@@ -1,5 +1,7 @@
 package homework;
 
+import homework.Board;
+import homework.Checker;
 import org.junit.*;
 import java.util.ArrayList;
 
@@ -13,36 +15,36 @@ public class IntegratedTest {
     }
 
     @Test
-    public void ItShouldMoveCheckerFrom0Negative4to1Negative4 (){
-        Checker c = board.addChecker(0,-4).getCheckerFromLocation(0,-4 );
+    public void ItShouldMoveCheckerFrom00to10 (){
+        Checker c = board.addChecker(0,0).getCheckerFromLocation(0,0 );
         c.move().Right();
         board.updatedBoard();
 
-        Assert.assertEquals(true,board.checkerExistAt(1,-4));
+        Assert.assertEquals(true,board.checkerExistAt(1,0));
     }
 
     @Test
-    public void ItShouldJumpCheckerFrom0Negative4to2Negative4WithOneCheckerAt1Negative4 (){
-        checkers.add(board.addChecker(0,-4).getCheckerFromLocation(0,-4 ));
-        checkers.add(board.addChecker(1,-4).getCheckerFromLocation(1,-4 ));
+    public void ItShouldJumpCheckerFrom00to20WithOneCheckerAt10 (){
+        checkers.add(board.addChecker(0,0).getCheckerFromLocation(0,0 ));
+        checkers.add(board.addChecker(1,0).getCheckerFromLocation(1,0 ));
         checkers.get(0).jump().Right();
         board.updatedBoard();
 
-        Assert.assertEquals(true,board.checkerExistAt(2,-4));
+        Assert.assertEquals(true,board.checkerExistAt(2,0));
 
     }
 
-//    @Test
-//    public void ItShouldJumpCheckerFrom00to2Negative2WithTwoCheckersAt10And2Negative1 (){
-//        checkers.add(board.addChecker(0,0).getCheckerFromLocation(0,0 ));
-//        checkers.add(board.addChecker(1,0).getCheckerFromLocation(1,0 ));
-//        checkers.add(board.addChecker(2,-1).getCheckerFromLocation(1,0 ));
-//
-//        checkers.get(0).jump().Right().LeftDown();
-//        board.updatedBoard();
-//
-//        Assert.assertEquals(true,board.checkerExistAt(2,-2));
-//    }
+    @Test
+    public void ItShouldJumpCheckerFrom00to2Negative2WithTwoCheckersAt10And2Negative1 (){
+        checkers.add(board.addChecker(0,0).getCheckerFromLocation(0,0 ));
+        checkers.add(board.addChecker(1,0).getCheckerFromLocation(1,0 ));
+        checkers.add(board.addChecker(2,-1).getCheckerFromLocation(1,0 ));
+
+        checkers.get(0).jump().Right().LeftDown();
+        board.updatedBoard();
+
+        Assert.assertEquals(true,board.checkerExistAt(2,-2));
+    }
 
 //    @Test
 //    public void ItShouldMoveOneCheckerFromTo(){
@@ -56,7 +58,7 @@ public class IntegratedTest {
 
     @After
     public void cleanUp(){
-        board.cleanUpBoard();
-        board.destroyAllObjectsOnTheBoard();
+        board = null;
+        checkers.clear();
     }
 }

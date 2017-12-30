@@ -14,32 +14,9 @@
 以下的範例會指導如何在您的機器上運行本程式。
 
 ### Pre-Requisites
-* Java 版本 - oracle-jdk 7 or oracle-jdk 8
-* Maven 3.5.2 - 如果您使用 maven 進行程式建置的話
-* Junit 4.12 - 執行測試
-
-## 執行程式
-
-如果使用外部測資，務必輸入副檔名，格式如下
-```
-java filename.txt Destination
-```
-其中 args[2] 的地方僅支援輸入數字 
-* 1 (設定左上方的綠色區域為終點)
-* 2 (設定上方的黃色區域為終點) 以及 
-* 3 (設定左下方的紅色區域為終點) 
-
-####Examples:
-
-```$xslt
-java initial.txt 1
-```
-這個意思是使用檔案為 initial 的外部檔案作為輸入測資，並設定 1 的地區為終點
-
-```$xslt
-java fixed 1
-```
-這個意思是固定下方黃色為起點，棋子填滿整個起點，並設定 1 的地區為終點
+* Java 版本 - open-jdk 7 or oracle-jdk 8
+* Maven 3 - 如果您使用 maven 進行程式建置的話
+* Junit 4 - 執行測試
 
 ## 執行測試
 

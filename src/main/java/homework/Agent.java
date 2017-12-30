@@ -1,7 +1,5 @@
 package homework;
 
-import java.io.IOException;
-
 public class Agent {
     private GameState StartGameState;
     private GameState ReadBoardState;
@@ -29,7 +27,7 @@ public class Agent {
 
     public void preJumpTo(){}
 
-    public void StartGame(String arg, int terminal) throws IOException {
+    public void StartGame(String arg, int terminal){
         state.Start(arg, terminal);
     }
 
