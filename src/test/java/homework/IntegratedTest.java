@@ -12,14 +12,14 @@ public class IntegratedTest {
        checkers = new ArrayList<Checker>();
     }
 
-    @Test
-    public void ItShouldMoveCheckerFrom0Negative4to1Negative4 (){
-        Checker c = board.addChecker(0,-4).getCheckerFromLocation(0,-4 );
-        c.move().Right();
-        board.updatedBoard();
-
-        Assert.assertEquals(true,board.checkerExistAt(1,-4));
-    }
+//    @Test
+//    public void ItShouldMoveCheckerFrom0Negative4to1Negative4 (){
+//        Checker c = board.addChecker(0,-4).getCheckerFromLocation(0,-4 );
+//        c.move().Right();
+//        board.updatedBoard();
+//
+//        Assert.assertEquals(true,board.checkerExistAt(1,-4));
+//    }
 
     @Test
     public void ItShouldJumpCheckerFrom0Negative4to2Negative4WithOneCheckerAt1Negative4 (){

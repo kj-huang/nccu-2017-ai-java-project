@@ -116,7 +116,8 @@ public class AgentTest {
 
     @After
     public void cleanUp(){
-        board = null;
+        board.cleanUpBoard();
+        board.destroyAllObjectsOnTheBoard();
         agent = null;
     }
 }
