@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af97a312-b060-499a-92f3-89a9e9b22ec2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/initial.txt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Agent.java" afterPath="$PROJECT_DIR$/src/main/java/homework/Agent.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Board.java" afterPath="$PROJECT_DIR$/src/main/java/homework/Board.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/GameState.java" afterPath="$PROJECT_DIR$/src/main/java/homework/GameState.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Main.java" afterPath="$PROJECT_DIR$/src/main/java/homework/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/StartGameState.java" afterPath="$PROJECT_DIR$/src/main/java/homework/StartGameState.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/AgentTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/AgentTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/BoardUtilityTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BoardUtilityTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/JumpTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/JumpFunctionsTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/MoveTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/MoveFunctionsTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,86 +31,7 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding>
-                <element signature="method#Board#0;class#Board#0" expanded="false" />
-                <element signature="method#addChecker#0;class#Board#0" expanded="false" />
-                <element signature="method#getCheckerFromLocation#0;class#Board#0" expanded="false" />
-                <element signature="method#updatedBoard#0;class#Board#0" expanded="false" />
-                <element signature="method#fillHome#0;class#Board#0" expanded="false" />
-                <element signature="method#setGreenAreaAsDestination#0;class#Board#0" expanded="false" />
-                <element signature="method#setYellowAreaAsDestination#0;class#Board#0" expanded="false" />
-                <element signature="method#setRedAreaAsDestination#0;class#Board#0" expanded="false" />
-                <element signature="method#isFillWithTargetArea#0;class#Board#0" expanded="false" />
-                <element signature="method#cleanUpBoard#0;class#Board#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadBoardState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework/ReadBoardState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-              <folding>
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework/Agent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="method#Agent#0;class#Agent#0" expanded="false" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectOneCheckerState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/homework/SelectOneCheckerState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegratedTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -129,8 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/homework/BoardAddCheckersTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/Board/BoardTestSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/BoardTest/BoardTestSuite.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Game.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardOtherTests.java" />
@@ -161,25 +91,27 @@
         <option value="$PROJECT_DIR$/src/test/java/homework/BoardTestSuite/BoardUtilityTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/IntegratedSuite/IntegratedTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Point.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/PointTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/BoardUtilityTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Move.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/AStarTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/Node.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework/StartGameState.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/SelectOneCheckerState.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/ReadBoardState.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/FinishMoveState.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/GameSetState.java" />
         <option value="$PROJECT_DIR$/src/main/java/homework/GameState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/homework/Agent.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/AgentTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/homework/Agent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework/Main.java" />
+        <option value="$PROJECT_DIR$/initial.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/homework/StartGameState.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/AgentTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/BoardUtilityTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/MoveFunctionsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/homework/Board.java" />
       </list>
     </option>
   </component>
@@ -197,8 +129,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="34" />
+    <option name="x" value="28" />
+    <option name="y" value="108" />
     <option name="width" value="1617" />
     <option name="height" value="938" />
   </component>
@@ -218,8 +150,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,23 +211,28 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nccu-2017-ai-java-project.git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="SearchEverywhereHistoryKey" value="Browse repositories&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/StartGameState.java&#10;Browse repositories&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$USER_HOME$/AppData/Roaming/npm/node_modules/gulp" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -320,7 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IntegratedTest">
+  <component name="RunManager" selected="JUnit.homework in nccu-2017-ai-java-project.git">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -342,32 +279,7 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="AgentTest.ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="homework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="nccu-2017-ai-java-project.git" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="homework" />
-      <option name="MAIN_CLASS_NAME" value="homework.AgentTest" />
-      <option name="METHOD_NAME" value="ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="All in nccu-2017-ai-java-project.git" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in nccu-2017-ai-java-project.git" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="nccu-2017-ai-java-project.git" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -387,7 +299,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="BoardUtilityTest.ItShouldReturnFalseWithNoAllCheckersAtTerminal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardUtilityTest.ItShouldGet15CheckersIfFillHome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="homework.*" />
@@ -399,32 +311,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="homework" />
       <option name="MAIN_CLASS_NAME" value="homework.BoardUtilityTest" />
-      <option name="METHOD_NAME" value="ItShouldReturnFalseWithNoAllCheckersAtTerminal" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="BoardUtilityTest.ItShouldReturnTrueWithAllCheckersAtTerminal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="homework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="nccu-2017-ai-java-project.git" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="homework" />
-      <option name="MAIN_CLASS_NAME" value="homework.BoardUtilityTest" />
-      <option name="METHOD_NAME" value="ItShouldReturnTrueWithAllCheckersAtTerminal" />
+      <option name="METHOD_NAME" value="ItShouldGet15CheckersIfFillHome" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -462,6 +349,56 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="IntegratedTest.ItShouldMoveCheckerFrom0Negative4to0Negative3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="nccu-2017-ai-java-project.git" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="homework" />
+      <option name="MAIN_CLASS_NAME" value="homework.IntegratedTest" />
+      <option name="METHOD_NAME" value="ItShouldMoveCheckerFrom0Negative4to0Negative3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="IntegratedTest.ItShouldMoveCheckerFrom0Negative4to1Negative4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="nccu-2017-ai-java-project.git" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="homework" />
+      <option name="MAIN_CLASS_NAME" value="homework.IntegratedTest" />
+      <option name="METHOD_NAME" value="ItShouldMoveCheckerFrom0Negative4to1Negative4" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -471,6 +408,31 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="homework in nccu-2017-ai-java-project.git" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="nccu-2017-ai-java-project.git" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="homework" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -530,20 +492,21 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in nccu-2017-ai-java-project.git" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BoardUtilityTest.ItShouldReturnTrueWithAllCheckersAtTerminal" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BoardUtilityTest.ItShouldReturnFalseWithNoAllCheckersAtTerminal" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AgentTest.ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.IntegratedTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.homework in nccu-2017-ai-java-project.git" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BoardUtilityTest.ItShouldGet15CheckersIfFillHome" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.IntegratedTest.ItShouldMoveCheckerFrom0Negative4to0Negative3" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.IntegratedTest.ItShouldMoveCheckerFrom0Negative4to1Negative4" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.IntegratedTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.IntegratedTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in nccu-2017-ai-java-project.git" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AgentTest.ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BoardUtilityTest.ItShouldReturnFalseWithNoAllCheckersAtTerminal" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.BoardUtilityTest.ItShouldReturnTrueWithAllCheckersAtTerminal" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.homework in nccu-2017-ai-java-project.git" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.IntegratedTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.IntegratedTest.ItShouldMoveCheckerFrom0Negative4to1Negative4" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.IntegratedTest.ItShouldMoveCheckerFrom0Negative4to0Negative3" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BoardUtilityTest.ItShouldGet15CheckersIfFillHome" />
       </list>
     </recent_temporary>
   </component>
@@ -569,44 +532,46 @@
       <workItem from="1514196877132" duration="2232000" />
       <workItem from="1514300870793" duration="6766000" />
       <workItem from="1514359550710" duration="30000" />
-      <workItem from="1514512471116" duration="10261000" />
+      <workItem from="1514512471116" duration="11295000" />
+      <workItem from="1514569576969" duration="283000" />
+      <workItem from="1514658165674" duration="7121000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AgentTest_ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame - 2017.12.29 at 15h 10m 17s.xml">
-      <configuration name="AgentTest.ItShouldChangeTheStateAfterFinishTheMoveWithContinueGame" configurationId="JUnit" />
+    <history-entry file="AgentTest_ItShouldSetUpTheGameWithFiles - 2017.12.31 at 04h 13m 48s.xml">
+      <configuration name="AgentTest.ItShouldSetUpTheGameWithFiles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 15h 16m 43s.xml">
+    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.31 at 04h 16m 32s.xml">
       <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 15h 25m 54s.xml">
+    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.31 at 04h 21m 34s.xml">
       <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 15h 53m 49s.xml">
-      <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
+    <history-entry file="BoardUtilityTest_ItShouldGet15CheckersIfFillHome - 2017.12.31 at 04h 15m 34s.xml">
+      <configuration name="BoardUtilityTest.ItShouldGet15CheckersIfFillHome" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 16h 16m 41s.xml">
-      <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
+    <history-entry file="BoardUtilityTest_ItShouldGet15CheckersIfFillHome - 2017.12.31 at 04h 16m 24s.xml">
+      <configuration name="BoardUtilityTest.ItShouldGet15CheckersIfFillHome" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 16h 17m 55s.xml">
-      <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 16h 18m 34s.xml">
-      <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_nccu-2017-ai-java-project_git - 2017.12.29 at 16h 20m 31s.xml">
-      <configuration name="All in nccu-2017-ai-java-project.git" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IntegratedTest - 2017.12.29 at 16h 30m 02s.xml">
+    <history-entry file="IntegratedTest - 2017.12.31 at 04h 21m 18s.xml">
       <configuration name="IntegratedTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegratedTest - 2017.12.29 at 16h 52m 04s.xml">
+    <history-entry file="IntegratedTest - 2017.12.31 at 04h 21m 31s.xml">
       <configuration name="IntegratedTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntegratedTest_ItShouldMoveCheckerFrom0Negative4to0Negative3 - 2017.12.31 at 04h 17m 57s.xml">
+      <configuration name="IntegratedTest.ItShouldMoveCheckerFrom0Negative4to0Negative3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntegratedTest_ItShouldMoveCheckerFrom0Negative4to1Negative4 - 2017.12.31 at 04h 18m 23s.xml">
+      <configuration name="IntegratedTest.ItShouldMoveCheckerFrom0Negative4to1Negative4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="homework_in_nccu-2017-ai-java-project_git - 2017.12.31 at 04h 22m 34s.xml">
+      <configuration name="homework in nccu-2017-ai-java-project.git" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64203000" />
+    <option name="totallyTimeSpent" value="72641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,8 +583,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="34" width="1617" height="938" extended-state="0" />
-    <editor active="true" />
+    <frame x="28" y="108" width="1617" height="938" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.4977778" order="6" side_tool="false" content_ui="tabs" />
@@ -629,20 +593,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.50222224" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502964" sideWeight="0.49650794" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32720104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502964" sideWeight="0.49650794" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262159" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22730158" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23238096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740214" sideWeight="0.49841017" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976275" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976275" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -689,12 +654,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/homework/Board.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Game.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/BoardCopy.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/Sample.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/Color.java" />
@@ -772,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/JumpTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="69" column="4" lean-forward="true" selection-start-line="69" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -787,24 +755,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/AlgorithmTestSuite/AlgorithmTestSuite.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardWithValidCoordinateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/MoveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1809">
-          <caret line="73" column="17" lean-forward="false" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/AgentTestSuite.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardTestSuite.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/Test.java" />
@@ -826,46 +776,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardUtilityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="97" column="62" lean-forward="false" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/AStarTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/AStarTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/Move.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -906,46 +825,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/StartGameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="53" column="54" lean-forward="false" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-          <folding>
-            <element signature="e#1201#1202#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/FinishMoveState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding>
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/GameSetState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-          <folding>
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#626#627#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/homework/ReadBoardState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="315">
           <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding>
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#670#671#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -958,68 +855,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/AgentTest.java">
+    <entry file="file://$USER_HOME$/Desktop/螢幕快照 2017-12-29 下午4.41.26.png" />
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="953">
-          <caret line="100" column="43" lean-forward="true" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
-          <folding>
-            <element signature="method#setUp#0;class#AgentTest#0" expanded="false" />
-            <element signature="method#ItShouldChangeStateRespectfully#0;class#AgentTest#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/螢幕快照 2017-12-29 下午4.41.26.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="method#Board#0;class#Board#0" expanded="false" />
-            <element signature="method#addChecker#0;class#Board#0" expanded="false" />
-            <element signature="method#getCheckerFromLocation#0;class#Board#0" expanded="false" />
-            <element signature="method#updatedBoard#0;class#Board#0" expanded="false" />
-            <element signature="method#fillHome#0;class#Board#0" expanded="false" />
-            <element signature="method#setGreenAreaAsDestination#0;class#Board#0" expanded="false" />
-            <element signature="method#setYellowAreaAsDestination#0;class#Board#0" expanded="false" />
-            <element signature="method#setRedAreaAsDestination#0;class#Board#0" expanded="false" />
-            <element signature="method#isFillWithTargetArea#0;class#Board#0" expanded="false" />
-            <element signature="method#cleanUpBoard#0;class#Board#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="method#Agent#0;class#Agent#0" expanded="false" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="390">
-            <caret line="26" column="3" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/homework/SelectOneCheckerState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="150">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1032,18 +880,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="226">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="method#Agent#0;class#Agent#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardWithValidCoordinateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/initial.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="105">
+          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/GameSetState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/AgentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="93" column="30" lean-forward="false" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/MoveFunctionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="73" column="17" lean-forward="false" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/JumpFunctionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="69" column="4" lean-forward="true" selection-start-line="69" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="198" column="38" lean-forward="false" selection-start-line="198" selection-start-column="38" selection-end-line="198" selection-end-column="38" />
+          <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
+            <element signature="e#2980#2981#0" expanded="true" />
+            <element signature="e#3056#3057#0" expanded="true" />
+            <element signature="method#getCheckerFromLocation#0;class#Board#0" expanded="false" />
+            <element signature="method#updatedBoard#0;class#Board#0" expanded="false" />
+            <element signature="method#setGreenAreaAsDestination#0;class#Board#0" expanded="false" />
+            <element signature="method#setYellowAreaAsDestination#0;class#Board#0" expanded="false" />
+            <element signature="e#6270#6271#0" expanded="true" />
+            <element signature="e#6314#6315#0" expanded="true" />
+            <element signature="e#6354#6355#0" expanded="true" />
+            <element signature="e#6392#6393#0" expanded="true" />
+            <element signature="e#6434#6435#0" expanded="true" />
+            <element signature="e#6480#6481#0" expanded="true" />
+            <element signature="method#isFillWithTargetArea#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BoardUtilityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/StartGameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/homework/SelectOneCheckerState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="615">
+            <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/IntegratedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
           <folding />
         </state>
       </provider>
