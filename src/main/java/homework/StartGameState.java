@@ -31,6 +31,9 @@ public class StartGameState implements GameState {
 
                     sCurrentLine = sCurrentLine.replaceAll("[^-?0-9]+", " ");
                     List<String> output = Arrays.asList(sCurrentLine.trim().split(" "));
+
+                    System.out.println("" + parseInt(output.get(0))+ parseInt(output.get(1)));
+
                     board.addChecker(parseInt(output.get(0)),parseInt(output.get(1)));
                 }
 

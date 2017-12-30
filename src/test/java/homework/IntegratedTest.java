@@ -58,5 +58,6 @@ public class IntegratedTest {
     public void cleanUp(){
         board.cleanUpBoard();
         board.destroyAllObjectsOnTheBoard();
+        checkers.clear();
     }
 }
