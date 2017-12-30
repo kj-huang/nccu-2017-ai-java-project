@@ -2,19 +2,17 @@ package homework;
 
 import java.io.IOException;
 
+import static java.lang.Integer.parseInt;
+
 public class Main {
     public static void main(String args[]) throws IOException {
         Board board = new Board();
         Agent agent = new Agent(board);
 
-        if(args[1] != null)
-            agent.StartGame(args[1], 1);
-        else //TODO refactor to absolute test case
-            agent.StartGame("", 1);
-
-//        while(){
-//
-//        }
-
+        if(args[0] != null && args[1] != null)
+            if(args[0].equals("fixed"))
+                agent.StartGame(args[0], parseInt(args[1]));
+            else
+                agent.StartGame("fixed", parseInt(args[1]));
     }
 }

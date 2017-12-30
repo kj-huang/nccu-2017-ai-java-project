@@ -1,5 +1,13 @@
-/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/BoardCopy.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/StartGameState.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Strategy.java
 /Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Board.java
-/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Sample.java
-/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Color.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Move.java
 /Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Point.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Jump.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/GameSetState.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Checker.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Agent.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/GameState.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/ReadBoardState.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/Main.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/main/java/homework/SelectOneCheckerState.java

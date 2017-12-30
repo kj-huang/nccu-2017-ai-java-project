@@ -23,10 +23,9 @@ public class GameSetState implements GameState{
     }
 
     public void GameSet() {
-        //TODO print out how many times of moving to finish the game
-//        agent.getCount();
+        System.out.println(agent.getCount());
 
-        //TODO Destroy the board and Checkers
-
+        board.cleanUpBoard();
+        board.destroyAllObjectsOnTheBoard();
     }
 }

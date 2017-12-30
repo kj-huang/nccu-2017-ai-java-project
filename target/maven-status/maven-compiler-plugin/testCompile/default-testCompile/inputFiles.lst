@@ -1,3 +1,8 @@
-/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/BoardTest.java
-/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/SampleTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/IntegratedTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/BoardAddCheckersTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/AgentTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/BoardWithValidCoordinateTest.java
 /Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/PointTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/MoveFunctionsTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/BoardUtilityTest.java
+/Users/kevinhuang1114/Java/nccu-2017-ai-java-project.git/src/test/java/homework/JumpFunctionsTest.java

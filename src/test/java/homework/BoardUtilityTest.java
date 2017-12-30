@@ -11,10 +11,8 @@ public class BoardUtilityTest {
         board = new Board();
     }
 
-//    @Ignore("Test Will affect with Board Test")
     @Test
     public void ItShouldGet15CheckersIfFillHome(){
-        //TODO fix the test
         board.fillHome();
         Assert.assertEquals(15,board.getRemainCheckersSku());
     }

@@ -20,7 +20,6 @@ public class Agent {
         StartGameState = new StartGameState(this, board);
         ReadBoardState = new ReadBoardState(this, board);
         SelectOneCheckerState = new SelectOneCheckerState(this, board);
-        FinishMoveState = new FinishMoveState(this, board);
         GameSetState = new GameSetState(this, board);
         state = new StartGameState(this, board);
     }

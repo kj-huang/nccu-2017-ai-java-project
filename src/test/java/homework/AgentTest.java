@@ -110,10 +110,6 @@ public class AgentTest {
     //    @Test
 //    public void ItShouldSelectTheChecker(){}
 
-
-//    @Test
-//    public void ItShouldFinishTheGame(){}
-
     @After
     public void cleanUp(){
         board.cleanUpBoard();

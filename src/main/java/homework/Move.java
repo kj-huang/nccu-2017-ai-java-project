@@ -1,6 +1,6 @@
 package homework;
 
-public class Move implements Strategy{
+public class Move {
 
     private Checker checker;
 

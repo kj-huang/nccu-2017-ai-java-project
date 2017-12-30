@@ -1,6 +1,6 @@
 package homework;
 
-public class Jump implements Strategy{
+public class Jump {
     private Checker checker;
 
     public Jump(Checker checker){
