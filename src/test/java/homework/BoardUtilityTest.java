@@ -2,6 +2,9 @@ package homework;
 
 import org.junit.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 
 public class BoardUtilityTest {
     private Board board;
@@ -14,7 +17,7 @@ public class BoardUtilityTest {
     @Test
     public void ItShouldGet15CheckersIfFillHome(){
         board.fillHome();
-        Assert.assertEquals(15,board.getRemainCheckersSku());
+        Assert.assertEquals(15,board.getCheckersSku());
     }
 
     @Test
@@ -135,9 +138,42 @@ public class BoardUtilityTest {
     public void ItShouldGetTwoCheckersAndOneObstacleCheckers(){
         board.addChecker(0,0).addChecker(1,3).addChecker(4,4);
 
-        Assert.assertEquals(2, board.getRemainCheckersSku());
+        Assert.assertEquals(2, board.getCheckersSku());
         Assert.assertEquals(1, board.getObstacleCheckersSku());
     }
+
+    @Test
+    public void getAllCheckersLocation(){
+        board.addChecker(-4,8).addChecker(-4,7).addChecker(-3,7);
+
+        ArrayList<Point> points = board.getAllCheckersLocation();
+
+        Assert.assertEquals(3, board.getCheckersSku());
+
+        Assert.assertEquals(-4,points.get(0).getX());
+        Assert.assertEquals(8,points.get(0).getY());
+
+        Assert.assertEquals(-4,points.get(1).getX());
+        Assert.assertEquals(7,points.get(1).getY());
+
+        Assert.assertEquals(-3,points.get(2).getX());
+        Assert.assertEquals(7,points.get(2).getY());
+    }
+
+    @Test
+    public void getAllCheckersLocationWithCheckersNotAtTerminalPoints(){
+        board.addChecker(-4,8).addChecker(-4,7).addChecker(-3,7);
+        board.setYellowAreaAsDestination();
+        board.getCheckerFromLocation(-4,7).setY(0);
+        board.getCheckerFromLocation(-4,0).setX(0);
+        board.updatedBoard();
+
+        ArrayList<Checker> checkers = board.getAllRemainCheckersNotAtTerminalPoints();
+
+        Assert.assertEquals(0,checkers.get(0).getX());
+        Assert.assertEquals(0,checkers.get(0).getY());
+    }
+
 
     @After
     public void tearDown(){

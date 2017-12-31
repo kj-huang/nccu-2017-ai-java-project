@@ -172,7 +172,7 @@ public class Board {
         return terminalPoints.size();
     }
 
-    public int getRemainCheckersSku(){
+    public int getCheckersSku(){
         return checkers.size();
     }
 
@@ -192,6 +192,14 @@ public class Board {
         return counter ==  checkers.size() && checkers.size() > 0;
     }
 
+    public boolean checkerIsAtTargetArea(int x, int y){
+        for(Point point: terminalPoints){
+            if(y == point.getY() && x == point.getX())
+                return true;
+        }
+        return false;
+    }
+
     public void cleanUpBoard(){
         for (int i = 0; i < grid.length; i++)
             for (int j = 0; j < grid[i].length; j++)
@@ -203,6 +211,28 @@ public class Board {
         checkers.clear();
         obstacleCheckers.clear();
         terminalPoints.clear();
+    }
+
+    public ArrayList<Point> getAllCheckersLocation(){
+        ArrayList<Point> points = new ArrayList<Point>();
+
+        for (Checker checker:checkers) {
+            points.add(new Point(checker.getX(), checker.getY()));
+        }
+
+        return points;
+    }
+
+    public ArrayList<Checker> getAllRemainCheckersNotAtTerminalPoints() {
+        ArrayList<Checker> remainCheckers = new ArrayList<Checker>();
+
+        for (Checker checker : checkers) {
+            if (!checkerIsAtTargetArea(checker.getX(), checker.getY())) {
+                remainCheckers.add(checker);
+            }
+        }
+
+        return remainCheckers;
     }
 
     public Checker getCheckers(){
