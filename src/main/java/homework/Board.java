@@ -7,6 +7,9 @@ public class Board {
     private ArrayList<Checker> obstacleCheckers;
     private ArrayList<Point> terminalPoints;
 
+    private Jump jump;
+    private Move move;
+
     private static final int[][] grid = {
             { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0, -1, -1, -1, -1  }, //17
 
@@ -202,52 +205,66 @@ public class Board {
         terminalPoints.clear();
     }
 
-    public void getCheckers(){
+    public Checker getCheckers(){
         //回傳所有checker的x y
+        for (Checker checker: checkers) {
+            int x = checker.getX();
+            int y = checker.getY();
+            Checker cc = new Checker(x,y);
+            return cc;
+        }
+        return null;
     }
 
 
-    public void checkJump(int x, int y){
+    public void checkJump(Checker c){
+        int x = c.getX();
+        int y = c.getY();
+        jump = new Jump(c);
         if (checkerExistAt(x-1,y+1)==true && checkerExistAt(x-2,y+2)==false){
             //判斷有沒有走過那個xy
             //還要判斷這顆旗子有沒有走過這條路
-            // checker jump
+            jump.LeftUp();
         }
         if (checkerExistAt(x-1,y)==true && checkerExistAt(x-2,y)==false){
-
+            jump.Left();
         }
-        if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false){
-
+        if (checkerExistAt(x,y-1)==true && checkerExistAt(x,y-2)==false){
+            jump.LeftDown();
         }
         if (checkerExistAt(x+1,y-1)==true && checkerExistAt(x+2,y-2)==false){
-
+            jump.DownRight();
         }
         if (checkerExistAt(x+1,y)==true && checkerExistAt(x+2,y)==false){
-
+            jump.Right();
         }
         if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false) {
-
+            jump.RightUp();
         }
     }
 
-    public void checkMove(int x, int y){
+    public void checkMove(Checker c){
+        int x = c.getX();
+        int y = c.getY();
+        move = new Move(c);
         if (checkerExistAt(x-1,y+1)==false){
-
+            //還要判斷這顆旗子有沒有走過這條路
+            move.LeftUp();
         }
         if (checkerExistAt(x-1,y)==false){
-
+            move.Left();
         }
-        if (checkerExistAt(x,y+1)==false){
-
+        if (checkerExistAt(x,y-1)==false){
+            move.LeftDown();
         }
         if (checkerExistAt(x+1,y-1)==false){
-
+            move.DownRight();
         }
         if (checkerExistAt(x+1,y)==false){
-
+            move.Right();
         }
         if (checkerExistAt(x,y+1)==false) {
-
+            move.RightUp();
         }
     }
 
