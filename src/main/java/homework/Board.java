@@ -202,10 +202,16 @@ public class Board {
         terminalPoints.clear();
     }
 
+    public void getCheckers(){
+        //回傳所有checker的x y
+    }
+
 
     public void checkJump(int x, int y){
         if (checkerExistAt(x-1,y+1)==true && checkerExistAt(x-2,y+2)==false){
-
+            //判斷有沒有走過那個xy
+            //還要判斷這顆旗子有沒有走過這條路
+            // checker jump
         }
         if (checkerExistAt(x-1,y)==true && checkerExistAt(x-2,y)==false){
 

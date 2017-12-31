@@ -3,28 +3,29 @@ package homework;
 public class Hfunction {
 
     private Checker newchecker = new Checker(x,y);
+    private ArrayList<Path> ;
     private Board board;
 
     Hfunction(Board board) {
         this.board = board;
-
+        board.getCheckerFromLocation();
+        board.getCheckers();
+        //取得15個 checkers 的 x,y 並且new checkers
         for (Checker checker:checkers) {
-            for(Point point: terminalPoints){
-                if(checker.getY() == point.getY() && checker.getX() == point.getX())
+//            for(Point point: terminalPoints){
+//                if(checker.getY() == point.getY() && checker.getX() == point.getX()){
+//
+//                }
 
-            }
+
+
         }
 
-        board.getCheckerFromLocation();
-    }
-
-    public void selectedJump(){
-        board.getCheckerFromLocation(0,0);
     }
 
     public ArrayList getPath()
     {
-        return _path;
+        return path;
     }
 
 
