@@ -268,5 +268,14 @@ public class Board {
         }
     }
 
+    public int hNumber(){
+        int h = 0;
+        for (Checker checker: checkers) {
+            int x = checker.getX();
+            int y = checker.getY();
+            h += -x+y;
+        }
+        return h;
+    }
 
 }

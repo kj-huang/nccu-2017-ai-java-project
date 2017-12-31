@@ -11,6 +11,7 @@ public class Hfunction {
         board = new Board();
 
         Checker cc = board.getCheckers();
+//        while ()
         board.checkJump(cc);
         board.checkMove(cc);
         ppaths = new ArrayList<CheckerPath>();
