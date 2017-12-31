@@ -72,6 +72,7 @@ public class Board {
         return this;
     }
 
+    //檢查盤面上的旗子是在無色區域
     public boolean isMiddleArea(int x, int y){
         boolean bottomRight =  (x <= 3 && y >= -3) && (x >= 0 && y <= 0);
         boolean topLeft =  (x >= -3 && y <= 3) && (x <= 0 && y >= 0);
@@ -81,10 +82,12 @@ public class Board {
         return bottomRight || bottomLeft || topLeft || topRight;
     }
 
+    //傳入座標，檢查是否該位置有其子存在
     public boolean checkerExistAt(int x, int y) {
         return (isValidateCoordinate(x, y) && (grid[x+8][y+8] == 1));
     }
 
+    //傳入座標，取得該座標上的棋子
     public Checker getCheckerFromLocation(int x, int y){
         for (Checker checker: checkers) {
             if(checker.getX() == x && checker.getY() == y && isValidateCoordinate(x, y))
@@ -93,6 +96,7 @@ public class Board {
         return null;
     }
 
+    //更新盤面
     public void updatedBoard(){
         cleanUpBoard();
         for (Checker checker: checkers) {
@@ -100,6 +104,7 @@ public class Board {
         }
     }
 
+    // 甲乙小題跳棋初始化
     public void fillHome(){
         this.addChecker(0,-4).addChecker(1,-4).addChecker(2,-4).addChecker(3,-4).addChecker(4,-4);
         this.addChecker(1,-5).addChecker(2,-5).addChecker(3,-5).addChecker(4,-5);
@@ -108,6 +113,7 @@ public class Board {
         this.addChecker(4,-8);
     }
 
+    //將左上方綠色區域設為終點
     public void setGreenAreaAsDestination(){
         if(getTerminalPointsCount() == 15)
             return;
@@ -172,7 +178,7 @@ public class Board {
         return terminalPoints.size();
     }
 
-    public int getRemainCheckersSku(){
+    public int getCheckersSku(){
         return checkers.size();
     }
 
@@ -180,6 +186,7 @@ public class Board {
         return obstacleCheckers.size();
     }
 
+    // 檢查是否全部棋子跳到終點
     public boolean isFillWithTargetArea(){
         int counter = 0;
         for (Checker checker:checkers) {
@@ -190,6 +197,15 @@ public class Board {
         }
 
         return counter ==  checkers.size() && checkers.size() > 0;
+    }
+
+    //傳入參數，檢查該棋子是否在終點
+    public boolean checkerIsAtTargetArea(int x, int y){
+        for(Point point: terminalPoints){
+            if(y == point.getY() && x == point.getX())
+                return true;
+        }
+        return false;
     }
 
     public void cleanUpBoard(){
@@ -203,6 +219,30 @@ public class Board {
         checkers.clear();
         obstacleCheckers.clear();
         terminalPoints.clear();
+    }
+
+    //取得全部棋子的點座標
+    public ArrayList<Point> getAllCheckersLocation(){
+        ArrayList<Point> points = new ArrayList<Point>();
+
+        for (Checker checker:checkers) {
+            points.add(new Point(checker.getX(), checker.getY()));
+        }
+
+        return points;
+    }
+
+    //取得所有未到終點的棋子
+    public ArrayList<Checker> getAllRemainCheckersNotAtTerminalPoints() {
+        ArrayList<Checker> remainCheckers = new ArrayList<Checker>();
+
+        for (Checker checker : checkers) {
+            if (!checkerIsAtTargetArea(checker.getX(), checker.getY())) {
+                remainCheckers.add(checker);
+            }
+        }
+
+        return remainCheckers;
     }
 
     public Checker getCheckers(){
