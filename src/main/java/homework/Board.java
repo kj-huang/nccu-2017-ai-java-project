@@ -201,4 +201,49 @@ public class Board {
         obstacleCheckers.clear();
         terminalPoints.clear();
     }
+
+
+    public void checkJump(int x, int y){
+        if (checkerExistAt(x-1,y+1)==true && checkerExistAt(x-2,y+2)==false){
+
+        }
+        if (checkerExistAt(x-1,y)==true && checkerExistAt(x-2,y)==false){
+
+        }
+        if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false){
+
+        }
+        if (checkerExistAt(x+1,y-1)==true && checkerExistAt(x+2,y-2)==false){
+
+        }
+        if (checkerExistAt(x+1,y)==true && checkerExistAt(x+2,y)==false){
+
+        }
+        if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false) {
+
+        }
+    }
+
+    public void checkMove(int x, int y){
+        if (checkerExistAt(x-1,y+1)==false){
+
+        }
+        if (checkerExistAt(x-1,y)==false){
+
+        }
+        if (checkerExistAt(x,y+1)==false){
+
+        }
+        if (checkerExistAt(x+1,y-1)==false){
+
+        }
+        if (checkerExistAt(x+1,y)==false){
+
+        }
+        if (checkerExistAt(x,y+1)==false) {
+
+        }
+    }
+
+
 }
