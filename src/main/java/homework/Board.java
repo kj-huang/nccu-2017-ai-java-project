@@ -9,6 +9,7 @@ public class Board {
 
     private Jump jump;
     private Move move;
+    private FunctionH FunctionH;
 
     private static final int[][] grid = {
             { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0, -1, -1, -1, -1  }, //17
@@ -228,7 +229,6 @@ public class Board {
         for (Checker checker:checkers) {
             points.add(new Point(checker.getX(), checker.getY()));
         }
-
         return points;
     }
 
@@ -245,40 +245,26 @@ public class Board {
         return remainCheckers;
     }
 
-    public Checker getCheckers(){
-        //回傳所有checker的x y
-        for (Checker checker: checkers) {
-            int x = checker.getX();
-            int y = checker.getY();
-            Checker cc = new Checker(x,y);
-            return cc;
-        }
-        return null;
-    }
-
-
     public void checkJump(Checker c){
         int x = c.getX();
         int y = c.getY();
         jump = new Jump(c);
+        FunctionH = new FunctionH();
         if (checkerExistAt(x-1,y+1)==true && checkerExistAt(x-2,y+2)==false){
-            //判斷有沒有走過那個xy
             //還要判斷這顆旗子有沒有走過這條路
-            jump.LeftUp();
-        }
-        if (checkerExistAt(x-1,y)==true && checkerExistAt(x-2,y)==false){
+            if(FunctionH.checkPath(x-2,y+2)){
+                FunctionH.addPath(x-2,y+2);
+                jump.LeftUp();
+            }
+        }else if (checkerExistAt(x-1,y)==true && checkerExistAt(x-2,y)==false){
             jump.Left();
-        }
-        if (checkerExistAt(x,y-1)==true && checkerExistAt(x,y-2)==false){
+        }else if (checkerExistAt(x,y-1)==true && checkerExistAt(x,y-2)==false){
             jump.LeftDown();
-        }
-        if (checkerExistAt(x+1,y-1)==true && checkerExistAt(x+2,y-2)==false){
+        }else if (checkerExistAt(x+1,y-1)==true && checkerExistAt(x+2,y-2)==false){
             jump.DownRight();
-        }
-        if (checkerExistAt(x+1,y)==true && checkerExistAt(x+2,y)==false){
+        }else if (checkerExistAt(x+1,y)==true && checkerExistAt(x+2,y)==false){
             jump.Right();
-        }
-        if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false) {
+        }else if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false) {
             jump.RightUp();
         }
     }
