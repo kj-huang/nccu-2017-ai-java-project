@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.ArrayList;
+
 public class SelectOneCheckerState implements GameState {
     private Board board;
     private Agent agent;
@@ -18,8 +20,23 @@ public class SelectOneCheckerState implements GameState {
     }
 
     public void SelectOneCheckerAndMove() {
-        //TODO algorithm to decide select a checker
-        Checker checker = board.getCheckerFromLocation(0,-4);
+        ArrayList<Checker> checkers = board.getAllRemainCheckersNotAtTerminalPoints();
+        ArrayList<ArrayList<CheckerPath>> lists = new ArrayList<ArrayList<CheckerPath>>();
+        for(Checker checker: checkers){
+            FunctionH h = new FunctionH(board, checker);
+            lists.add(h.getBestPathSolution());
+        }
+
+
+        for(ArrayList list : lists){
+            //best pointmove = list.indexOf(1);
+            //return best list index
+        }
+
+        //new Logger(list.index);
+        //move checker to new point
+        //updated board
+
         agent.setState(agent.getFinishMoveState());
 
     }
