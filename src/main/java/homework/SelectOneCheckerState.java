@@ -27,16 +27,28 @@ public class SelectOneCheckerState implements GameState {
             lists.add(h.getBestPathSolution());
         }
 
-
-        for(ArrayList list : lists){
-            //best pointmove = list.indexOf(1);
-            //return best list index
+        int index = 0;
+        int h = 100;
+        for(int i = 0; i < lists.size(); i++){
+            for(int j = lists.get(i).size()-1; j < lists.get(i).size(); j++){
+                if(j > 0 && lists.get(i) != null && lists.get(i).get(j) != null)
+                    if(((0 - lists.get(i).get(j).getX()) + lists.get(i).get(j).getY()) > h){
+                        index = i;
+                        h = ((0 - lists.get(i).get(j).getX()) + lists.get(i).get(j).getY());
+                    }
+            }
         }
 
-        //new Logger(list.index);
-        //move checker to new point
-        //updated board
+        new Logger(lists.get(index));
 
+        //move checker to new point
+        for(Checker checker: checkers){
+            if(checker.getX() == lists.get(index).get(0).getX() && checker.getY() == lists.get(index).get(0).getY()){
+                checker.setX(lists.get(index).get(lists.get(index).size()-1).getX());
+                checker.setY(lists.get(index).get(lists.get(index).size()-1).getY());
+            }
+        }
+        board.updatedBoard();
         agent.setState(agent.getFinishMoveState());
 
     }

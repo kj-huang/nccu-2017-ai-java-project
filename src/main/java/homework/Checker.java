@@ -38,6 +38,10 @@ public class Checker {
         this.y = y;
     }
 
+    public Point getPoint(){
+        return new Point(this.x, this.y);
+    }
+
     public String printLocation(){
         return "(" + getX() + "," + getY() + ")";
     }

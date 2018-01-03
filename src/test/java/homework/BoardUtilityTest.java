@@ -174,6 +174,23 @@ public class BoardUtilityTest {
         Assert.assertEquals(0,checkers.get(0).getY());
     }
 
+    @Test
+    public void getMoveNodeCounts(){
+        board.addChecker(-2,4);
+
+        Node<Point> points = board.checkMove(board.getCheckerFromLocation(-2,4));
+
+        Assert.assertEquals(6,points.getChildren().size());
+    }
+
+    @Test
+    public void getMoveNodeAllData(){
+        board.addChecker(-2,4);
+
+        Node<Point> points = board.checkMove(board.getCheckerFromLocation(-2,4));
+
+
+    }
 
     @After
     public void tearDown(){

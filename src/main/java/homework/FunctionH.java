@@ -41,34 +41,47 @@ public class FunctionH {
         return true;
     }
 
-    public int hNumber(){
-        int h = 0;
-        for (Point p: points) {
-            int x = p.getX();
-            int y = p.getY();
-            h += -x+y;
-        }
-        return h;
+    public int hNumber(int x, int y){
+        return -x+y;
     }
 
 
     public ArrayList<Point> getBestPathSolution() {
+        ArrayList<ArrayList<Point>> lists = new ArrayList<ArrayList<Point>>();
+        ArrayList<Point> paths;
+        Node<Point> root = new Node<Point>(checker.getPoint());
 
-        int[] arrayCanMove = board.checkMove(checker);
-        for(int i = 0; i < arrayCanMove.length; i++){
+        Node<Point> points =  board.checkMove(checker);
 
+        ArrayList<Integer> hNumber = new ArrayList<Integer>();
+
+        int h = 999;
+        ArrayList<Point> bestMove = new ArrayList<Point>();
+        for(Node<Point> node : points.getChildren()) {
+            if(hNumber(node.getData().getX(),node.getData().getY()) < h){
+                bestMove.clear();
+                bestMove.add(node.getData().getPoint());
+                h = hNumber(node.getData().getX(),node.getData().getY());
+            }
         }
 
 
-//        for (arrayCanMove){
-//            if(arrayCanMove[])
-//        }
 
 
-
-
-        ArrayList<Point> list = new ArrayList<Point>();
-        list.add(new Point(1,1));
-        return list;
+////        Integer min = 9999;
+////        for(Integer h : hNumber) {
+////            if(h < min)
+////                min = h;
+////        }
+//
+//
+//        root.addChild(board.checkMove(checker));
+//
+////        lists.addAll(board.checkJump(checker));
+//
+//
+//        ArrayList<Point> list = new ArrayList<Point>();
+//        list.add(new Point(1,1));
+        return bestMove;
     }
 }

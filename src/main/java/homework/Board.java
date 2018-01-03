@@ -1,7 +1,4 @@
 package homework;
-
-import com.sun.xml.internal.xsom.impl.scd.Iterators;
-
 import java.util.ArrayList;
 
 public class Board {
@@ -55,7 +52,12 @@ public class Board {
     }
 
     public boolean isValidateCoordinate(int x, int y){
-        return grid[x + 8][y + 8] != -1;
+        try {
+            return grid[x + 8][y + 8] != -1;
+        }
+        catch(ArrayIndexOutOfBoundsException exception) {
+            return false;
+        }
     }
 
     private boolean isEmptySlot(int x, int y){
@@ -258,74 +260,67 @@ public class Board {
         return null;
     }
 
-
-    public int[] checkJump(Checker c){
+    public Node<Point> checkJump(Checker c, Node<Point> parentNode){
         int x = c.getX();
         int y = c.getY();
-        jump = new Jump(c);
-        int[] array = new int[6];
 
-        if (checkerExistAt(x-1,y+1)==true && checkerExistAt(x-2,y+2)==false){
-            //判斷有沒有走過那個xy
-            //還要判斷這顆旗子有沒有走過這條路
-            jump.LeftUp();
-            array[0]= 1;
+        if(parentNode == null){
+            parentNode = new Node<Point>(new Point(x,y));
         }
-        if (checkerExistAt(x-1,y)==true && checkerExistAt(x-2,y)==false){
-            jump.Left();
-            array[1]= 1;
+
+        if (checkerExistAt(x - 1, y + 1) && (!checkerExistAt(x - 2, y + 2) && isValidateCoordinate(x - 2, y + 2))){
+            parentNode.addChild(new Node<Point>(new Point(x-2,y+2)));
+            checkJump(new Checker(x-2, y+2),parentNode);
         }
-        if (checkerExistAt(x,y-1)==true && checkerExistAt(x,y-2)==false){
-            jump.LeftDown();
-            array[2]= 1;
+        if (checkerExistAt(x - 1, y) && (!checkerExistAt(x - 2, y) && isValidateCoordinate(x - 2, y))){
+            parentNode.addChild(new Node<Point>(new Point(x-2,y)));
+            checkJump(new Checker(x-2, y),parentNode);
         }
-        if (checkerExistAt(x+1,y-1)==true && checkerExistAt(x+2,y-2)==false){
-            jump.DownRight();
-            array[3]= 1;
+        if (checkerExistAt(x, y - 1) && (!checkerExistAt(x, y - 2) && isValidateCoordinate(x, y-2 ))){
+            parentNode.addChild(new Node<Point>(new Point(x,y-2)));
+            checkJump(new Checker(x, y-2),parentNode);
         }
-        if (checkerExistAt(x+1,y)==true && checkerExistAt(x+2,y)==false){
-            jump.Right();
-            array[4]= 1;
+        if (checkerExistAt(x + 1, y - 1) && (!checkerExistAt(x + 2, y - 2)&& isValidateCoordinate(x + 2, y-2))){
+            parentNode.addChild(new Node<Point>(new Point(x+2,y-2)));
+            checkJump(new Checker(x+2, y-2),parentNode);
         }
-        if (checkerExistAt(x,y+1)==true && checkerExistAt(x,y+2)==false) {
-            jump.RightUp();
-            array[5]= 1;
+        if (checkerExistAt(x + 1, y) && (!checkerExistAt(x + 2, y)&& isValidateCoordinate(x + 2, y))){
+             parentNode.addChild(new Node<Point>(new Point(x,y)));
+            checkJump(new Checker(x+1, y),parentNode);
         }
-        return array;
+        if (checkerExistAt(x, y + 1) && (!checkerExistAt(x, y + 2)&& isValidateCoordinate(x, y+2))) {
+            parentNode.addChild(new Node<Point>(new Point(x,y+2)));
+            checkJump(new Checker(x, y+2),parentNode);
+        }
+
+        return parentNode;
     }
 
-    public int[] checkMove(Checker c){
+    public Node<Point>  checkMove(Checker c){
         int x = c.getX();
         int y = c.getY();
-        move = new Move(c);
-        int[] array = new int[6];
 
-        if (checkerExistAt(x-1,y+1)==false){
-            //還要判斷這顆旗子有沒有走過這條路
-//            move.LeftUp();
-            array[0]= 1;
+        Node<Point> parentNode = new Node<Point>(new Point(x,y));
+
+        if (!checkerExistAt(x - 1, y + 1) && isValidateCoordinate(x - 1, y + 1)){
+            parentNode.addChild(new Node<Point>(new Point(x-1,y+1)));
         }
-        if (checkerExistAt(x-1,y)==false){
-//            move.Left();
-            array[1]= 1;
+        if (!checkerExistAt(x - 1, y)&& isValidateCoordinate(x - 1, y )){
+            parentNode.addChild(new Node<Point>(new Point(x-1,y)));
         }
-        if (checkerExistAt(x,y-1)==false){
-//            move.LeftDown();
-            array[2]= 1;
+        if (!checkerExistAt(x, y - 1)&& isValidateCoordinate(x , y -1)){
+            parentNode.addChild(new Node<Point>(new Point(x,y-1)));
         }
-        if (checkerExistAt(x+1,y-1)==false){
-//            move.DownRight();
-            array[3]= 1;
+        if (!checkerExistAt(x + 1, y - 1)&& isValidateCoordinate(x + 1, y - 1)){
+            parentNode.addChild(new Node<Point>(new Point(x+1,y-1)));
         }
-        if (checkerExistAt(x+1,y)==false){
-//            move.Right();
-            array[4]= 1;
+        if (!checkerExistAt(x + 1, y)&& isValidateCoordinate(x + 1, y)){
+            parentNode.addChild(new Node<Point>(new Point(x+1,y)));
         }
-        if (checkerExistAt(x,y+1)==false) {
-//            move.RightUp();
-            array[5]= 1;
+        if (!checkerExistAt(x, y + 1) && isValidateCoordinate(x, y + 1)) {
+            parentNode.addChild(new Node<Point>(new Point(x,y+1)));
         }
-        return array;
+        return parentNode;
     }
 
 
