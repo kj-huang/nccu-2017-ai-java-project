@@ -104,7 +104,7 @@ public class AgentTest {
         agent.ReadBoard();
         agent.SelectOneCheckerAndMove();
 
-        Assert.assertSame(agent.getState(), agent.getFinishMoveState());
+        Assert.assertSame(agent.getState(), agent.getReadBoardState());
     }
 
     //    @Test

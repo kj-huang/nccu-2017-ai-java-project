@@ -67,6 +67,7 @@ public class StartGameState implements GameState {
         }
 
         //board set Terminal State
+        System.out.println("Read Board");
         agent.setState(agent.getReadBoardState());
     }
 

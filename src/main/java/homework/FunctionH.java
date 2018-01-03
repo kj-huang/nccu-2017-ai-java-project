@@ -55,10 +55,10 @@ public class FunctionH {
 
         ArrayList<Integer> hNumber = new ArrayList<Integer>();
 
-        int h = 999;
+        int h = -1000;
         ArrayList<Point> bestMove = new ArrayList<Point>();
         for(Node<Point> node : points.getChildren()) {
-            if(hNumber(node.getData().getX(),node.getData().getY()) < h){
+            if(hNumber(node.getData().getX(),node.getData().getY()) > h){
                 bestMove.clear();
                 bestMove.add(node.getData().getPoint());
                 h = hNumber(node.getData().getX(),node.getData().getY());

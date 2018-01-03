@@ -302,22 +302,22 @@ public class Board {
 
         Node<Point> parentNode = new Node<Point>(new Point(x,y));
 
-        if (!checkerExistAt(x - 1, y + 1) && isValidateCoordinate(x - 1, y + 1)){
+        if ((!checkerExistAt(x - 1, y + 1)) && isValidateCoordinate(x - 1, y + 1)){
             parentNode.addChild(new Node<Point>(new Point(x-1,y+1)));
         }
-        if (!checkerExistAt(x - 1, y)&& isValidateCoordinate(x - 1, y )){
+        if ((!checkerExistAt(x - 1, y))&& isValidateCoordinate(x - 1, y )){
             parentNode.addChild(new Node<Point>(new Point(x-1,y)));
         }
-        if (!checkerExistAt(x, y - 1)&& isValidateCoordinate(x , y -1)){
+        if ((!checkerExistAt(x, y - 1))&& isValidateCoordinate(x , y -1)){
             parentNode.addChild(new Node<Point>(new Point(x,y-1)));
         }
-        if (!checkerExistAt(x + 1, y - 1)&& isValidateCoordinate(x + 1, y - 1)){
+        if ((!checkerExistAt(x + 1, y - 1))&& isValidateCoordinate(x + 1, y - 1)){
             parentNode.addChild(new Node<Point>(new Point(x+1,y-1)));
         }
-        if (!checkerExistAt(x + 1, y)&& isValidateCoordinate(x + 1, y)){
+        if ((!checkerExistAt(x + 1, y))&& isValidateCoordinate(x + 1, y)){
             parentNode.addChild(new Node<Point>(new Point(x+1,y)));
         }
-        if (!checkerExistAt(x, y + 1) && isValidateCoordinate(x, y + 1)) {
+        if ((!checkerExistAt(x, y + 1)) && isValidateCoordinate(x, y + 1)) {
             parentNode.addChild(new Node<Point>(new Point(x,y+1)));
         }
         return parentNode;
