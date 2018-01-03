@@ -21,7 +21,7 @@ public class SelectOneCheckerState implements GameState {
 
     public void SelectOneCheckerAndMove() {
         ArrayList<Checker> checkers = board.getAllRemainCheckersNotAtTerminalPoints();
-        ArrayList<ArrayList<CheckerPath>> lists = new ArrayList<ArrayList<CheckerPath>>();
+        ArrayList<ArrayList<Point>> lists = new ArrayList<ArrayList<Point>>();
         for(Checker checker: checkers){
             FunctionH h = new FunctionH(board, checker);
             lists.add(h.getBestPathSolution());

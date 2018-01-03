@@ -25,6 +25,8 @@ public class FunctionH {
         this.checker = checker;
         list = new ArrayList<ArrayList<CheckerPath>>();
         points = board.getAllCheckersLocation();
+
+//        newPath(checker);
     }
 
     public void addPath(int x, int y) {
@@ -50,9 +52,23 @@ public class FunctionH {
     }
 
 
-    public ArrayList<CheckerPath> getBestPathSolution() {
-        ArrayList<CheckerPath> list = new ArrayList<CheckerPath>();
-        list.add(new CheckerPath(1,1));
+    public ArrayList<Point> getBestPathSolution() {
+
+        int[] arrayCanMove = board.checkMove(checker);
+        for(int i = 0; i < arrayCanMove.length; i++){
+
+        }
+
+
+//        for (arrayCanMove){
+//            if(arrayCanMove[])
+//        }
+
+
+
+
+        ArrayList<Point> list = new ArrayList<Point>();
+        list.add(new Point(1,1));
         return list;
     }
 }
