@@ -59,3 +59,4 @@ mvn test -B
 * [Travis.ci](https://travis-ci.org/mybaseball52/nccu-2017-ai-java-project) - CI server
 
 ## 作者
+* mybaseball52
