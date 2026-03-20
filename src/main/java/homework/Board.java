@@ -285,8 +285,8 @@ public class Board {
             checkJump(new Checker(x+2, y-2),parentNode);
         }
         if (checkerExistAt(x + 1, y) && (!checkerExistAt(x + 2, y)&& isValidateCoordinate(x + 2, y))){
-             parentNode.addChild(new Node<Point>(new Point(x,y)));
-            checkJump(new Checker(x+1, y),parentNode);
+            parentNode.addChild(new Node<Point>(new Point(x+2,y)));
+            checkJump(new Checker(x+2, y),parentNode);
         }
         if (checkerExistAt(x, y + 1) && (!checkerExistAt(x, y + 2)&& isValidateCoordinate(x, y+2))) {
             parentNode.addChild(new Node<Point>(new Point(x,y+2)));
