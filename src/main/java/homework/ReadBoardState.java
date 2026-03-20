@@ -10,7 +10,7 @@ public class ReadBoardState implements GameState{
     }
 
     public void Start(String args, int terminal) {
-        System.out.println("You already start a game");
+        System.out.println(Messages.get("game.alreadyStarted"));
     }
 
     public void ReadBoard() {
@@ -22,10 +22,10 @@ public class ReadBoardState implements GameState{
     }
 
     public void SelectOneCheckerAndMove() {
-        System.out.println("please check the board first");
+        System.out.println(Messages.get("game.checkBoardFirst"));
     }
 
     public void GameSet() {
-        System.out.println("You have Checkers on the board!!");
+        System.out.println(Messages.get("game.haveCheckers"));
     }
 }

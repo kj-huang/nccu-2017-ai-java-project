@@ -11,15 +11,15 @@ public class GameSetState implements GameState{
     }
 
     public void Start(String args, int terminal) {
-        System.out.println("You already finish a game");
+        System.out.println(Messages.get("game.alreadyFinished"));
     }
 
     public void ReadBoard() {
-        System.out.println("You already finish a game");
+        System.out.println(Messages.get("game.alreadyFinished"));
     }
 
     public void SelectOneCheckerAndMove() {
-        System.out.println("You already finish a game");
+        System.out.println(Messages.get("game.alreadyFinished"));
     }
 
     public void GameSet() {

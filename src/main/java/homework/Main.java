@@ -9,7 +9,7 @@ public class Main {
         Board board = new Board();
         Agent agent = new Agent(board);
 
-        System.out.println("Start");
+        System.out.println(Messages.get("game.start"));
 
         if(args[0] != null && args[1] != null)
             if(!args[0].equals("fixed"))

@@ -67,21 +67,21 @@ public class StartGameState implements GameState {
         }
 
         //board set Terminal State
-        System.out.println("Read Board");
+        System.out.println(Messages.get("game.readBoard"));
         agent.setState(agent.getReadBoardState());
     }
 
 
 
     public void ReadBoard() {
-        System.out.println("You haven't initialize Board yet");
+        System.out.println(Messages.get("game.notInitialized"));
     }
 
     public void SelectOneCheckerAndMove() {
-        System.out.println("Please Select a checker");
+        System.out.println(Messages.get("game.selectChecker"));
     }
 
     public void GameSet() {
-        System.out.println("You have Checkers on the board!!");
+        System.out.println(Messages.get("game.haveCheckers"));
     }
 }

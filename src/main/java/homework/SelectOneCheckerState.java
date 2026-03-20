@@ -13,15 +13,15 @@ public class SelectOneCheckerState implements GameState {
     }
 
     public void Start(String args, int terminal) {
-        System.out.println("You already start a game");
+        System.out.println(Messages.get("game.alreadyStarted"));
     }
 
     public void ReadBoard() {
-        System.out.println("You should choose a checker");
+        System.out.println(Messages.get("game.shouldChoose"));
     }
 
     public void SelectOneCheckerAndMove() {
-        System.out.println("Select Checkers");
+        System.out.println(Messages.get("game.selectCheckers"));
 
         ArrayList<Checker> checkers = board.getAllRemainCheckersNotAtTerminalPoints();
         ArrayList<ArrayList<Point>> lists = new ArrayList<ArrayList<Point>>();
@@ -63,11 +63,11 @@ public class SelectOneCheckerState implements GameState {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Read Board");
+        System.out.println(Messages.get("game.readBoard"));
         agent.setState(agent.getReadBoardState());
     }
 
     public void GameSet() {
-        System.out.println("You have Checkers on the board!!");
+        System.out.println(Messages.get("game.haveCheckers"));
     }
 }
